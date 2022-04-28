@@ -1,0 +1,29 @@
+{
+  "name": "project-tech",
+  "version": "1.0.0",
+  "description": "Filteren en favorieten",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VanessaChoe/Project-Tech.git"
+  },
+  "keywords": [
+    "Features",
+    "Project-Tech"
+  ],
+  "author": "Vanessa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VanessaChoe/Project-Tech/issues"
+  },
+  "homepage": "https://github.com/VanessaChoe/Project-Tech#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "express": "^4.18.0"
+  }
+}
