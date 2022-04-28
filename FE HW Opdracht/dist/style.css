@@ -1,0 +1,31 @@
+:root {
+  --fed-color: #4936EB;
+  --bg-color: #111111;
+  --main-font: "Expletus Sans", cursive;
+}
+
+body {
+  background: var(--bg-color);
+  font-size: 1.2em;
+  font-family: var(--main-font);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+}
+
+form fieldset {
+  margin-top: 0;
+  margin-bottom: 1em;
+  padding: 1em;
+  color: var(--fed-color);
+  border: 1px solid var(--fed-color);
+}
+
+form p {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
