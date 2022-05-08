@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
+
+.InlogschermBody{
+    background-image: url("../Images/BackgroundImage.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    font-family: "Lato";
+}
+
+.InlogschermBody h1{
+    text-align: center;
+    color: white;
+    font-size: 30pt;
+    font-family: "Lato-Light";
+    margin-top: 1.5em;
+}
+
+.InlogschermBody h2{
+    text-align: center;
+    color: white;
+    font-size: 40pt;
+    font-family: "Lato-Bold";
+    margin-top: -0.5em;
+}
+
+/* <!--https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_login_form--> */
+
+form{
+    margin: 1em;
+    margin-top: 6em;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 0.75em 0.125em;
+  margin: 0.6em 0;
+  display: inline-block;
+  border: 0.09em solid white;
+  border-radius: 0.4em;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+::-webkit-input-placeholder { /* https://www.w3schools.com/cssref/sel_placeholder.asp */
+    color: white;
+    margin-left: -1;
+  }
+
+label{
+    color: white;
+}
+
+button {
+  color: black;
+  padding: 0.875em 1.25em;
+  margin: 2em 0;
+  border: none;
+  border-radius: 0.4em;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+}
+
+.InlogschermBody p{
+    font-size: 0.8em;
+    color: white;
+    text-align: center;
+}
+.InlogschermBody p a{
+    color: white;
+    font-family: Lato-bold;
+}
+
+
+/* -Filterscherm1---------------------------------------------------------------------- */
+
+.Filterscherm1Body{
+    background-color:#F7F7F7;
+}
+
+.Filterscherm1Body h1{
+    text-align: center;
+    color: #0A756D;
+    font-size: 25pt;
+    font-family: "Lato-Bold";
+    margin-top: 1.2em;
+}
+.Filterscherm1Body h1 span{
+    color: black;
+}
+
+.Filterscherm1Body h2{
+    text-align: center;
+    color: black;
+    font-size: 15pt;
+    font-family: "Lato-Semibold";;
+    margin-top: -0.9em;
+}
+
+.Filterscherm1Body nav{
+    display: flex;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 58%;
+}
+.Filterscherm1Body nav img{
+    width: 1.5em;
+    height: 1.5em;
+    margin-top: 1.5em;
+}
+
+.Filterscherm1Body section::-webkit-scrollbar { /* https://blog.hubspot.com/website/hide-scrollbar-css */
+    display: none;
+}
+
+.Filterscherm1Body section:first-of-type{ /* https://codepen.io/DuskoStamenic/pen/zYpXrZB?editors=1100 */
+    margin-top: 2em;
+    margin-left: 1.5em;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    max-width: 90%;
+    display: flex;
+    gap: .7em;
+}
+.Filterscherm1Body section:first-of-type a{
+    font-family: "Lato-Semibold";
+    font-size: 10.5pt;
+    color: #0A756D;
+    text-decoration: none;
+    background-color: white;
+    padding: 0.4em 0.7em 0.3em 0.7em;
+    border-radius: 0.2em;
+    width: 11.1em;
+    filter: drop-shadow(0px 1px 3px lightgrey);
+    margin-bottom: 2em;
+
+    background-position: center;
+    background-size: cover;
+    opacity: 0.85;
+}
+.Filterscherm1Body section:first-of-type a:hover{
+    color: white;
+    text-decoration: none;
+    background-color:#0A756D;
+}
+
+
+.Filterscherm1Body section:nth-of-type(2){
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+}
+.Filterscherm1Body section:nth-of-type(2) img{
+    width: 11em;
+    height: 7em;
+    margin-bottom: 0.2em;
+    border-radius: 0.4em;
+    filter: drop-shadow(0px 1px 3px lightgrey);
+    opacity: 0.95;
+}
+.Filterscherm1Body section:nth-of-type(2) img:hover{
+    opacity: 0.7;
+    transform: scale(1.06);
+}
+    
+/* -------------------------------------------------------------------------- */
+
+.FavorietenschermBodyBody{
+    background-color:#F7F7F7;
+}
+
+.FavorietenschermBody h1{
+    text-align: center;
+    color: #0A756D;
+    font-size: 25pt;
+    font-family: "Lato-Bold";
+    margin-top: 1.2em;
+}
+.FavorietenschermBody h2{
+    text-align: center;
+    color: black;
+    font-size: 15pt;
+    font-family: "Lato-Semibold";;
+    margin-top: -0.9em;
+}
+
+.FavorietenschermBody nav{
+    display: flex;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 58%;
+}
+.FavorietenschermBody nav a img{
+    width: 1.5em;
+    height: 1.5em;
+    margin-top: 1.5em;
+}
+
+.FavorietenschermBody section:first-of-type{
+    justify-content: center;
+    margin-top: 3em;
+}
+.FavorietenschermBody section:first-of-type figure img{
+    display: block;
+    width: 28em;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    opacity: 0.95;
+}
+.FavorietenschermBody section:first-of-type figure:first-of-type img:hover{
+    opacity: 0.7;
+    transition: 300ms ease;
+}
+
+.FavorietenschermBody section:first-of-type figure:nth-of-type(2){
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    grid-gap: 10px;
+}
+.FavorietenschermBody section:first-of-type figure:first-of-type img{
+    border-radius: 0.4em;
+    filter: drop-shadow(0px 1px 3px lightgrey);
+    opacity: 0.95;
+}
+.FavorietenschermBody section:first-of-type figure:nth-of-type(2) img{
+    display: block;
+    width: 9em;
+    border-radius: 0.4em;
+    filter: drop-shadow(0px 1px 3px lightgrey);
+    opacity: 0.95;
+}
+.FavorietenschermBody section:first-of-type figure:nth-of-type(2) img:hover{
+    opacity: 0.7;
+    transition: 300ms ease;
+}
+
+.FavorietenschermBody section:nth-of-type(2){
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    margin-top: 2.5em;
+}
+.FavorietenschermBody section:nth-of-type(2) a img{
+    width: 4.5em;
+}
+.FavorietenschermBody section:nth-of-type(2) a img:hover{
+    transform: scale(1.1);
+}
+
+
+
+

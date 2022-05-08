@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inlogscherm</title>
+    <link rel='stylesheet' href='css/styles.css'/>
+    <link rel="stylesheet" href="https://use.typekit.net/dew5tlo.css">
+</head>
+<body class="InlogschermBody">
+    <main>
+    <h1>Welkom bij</h1>
+    <h2>TravelBuddy</h2>
+
+    <!--https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_login_form-->
+    <form action="/action_page.php" method="post"> 
+
+        <div class="container">
+          <label for="talk-type-1"><b>Gebruikersnaam</b></label>
+          <input type="text" placeholder="Gebruikersnaam" name="uname" required>
+      
+          <label for="talk-type-1"><b>Wachtwoord</b></label>
+          <input type="password" placeholder="Wachtwoord" name="psw" required>
+          
+          <!-- https://www.codegrepper.com/code-examples/html/how+to+link+button+to+another+page+in+javascript -->
+          <button onclick="btnClicked()">Inloggen</button>
+          
+        </div>
+    </form>
+
+    <p>Heb je nog geen account? <a href="Filterscherm1.html">Registreer</a> nu.</p>
+
+    <script src="javascript/Inlogscherm.js"></script>    
+    </main>
+</body>
+</html>
