@@ -11,8 +11,9 @@
     "url": "git+https://github.com/VanessaChoe/Project-Tech.git"
   },
   "keywords": [
-    "Features",
-    "Project-Tech"
+    "Filteren",
+    "en",
+    "favorieten"
   ],
   "author": "Vanessa",
   "license": "MIT",
@@ -24,6 +25,6 @@
     "nodemon": "^2.0.15"
   },
   "dependencies": {
-    "express": "^4.18.0"
+    "express": "^4.18.1"
   }
 }
