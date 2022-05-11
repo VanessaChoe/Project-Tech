@@ -21,11 +21,26 @@
 // })
 
 
-// http://localhost:3000/Inlogscherm.html
+
+
+
+
+
+
+
+
+
+
+import * as Sqrl from 'squirrelly'
+
+const myTemplate = 'My favorite template engine is {{it.favorite}}.'
+
+const result = Sqrl.render(myTemplate, {
+  favorite: 'Squirrelly, definitely'
+})
 
 const express = require('express');
 
-// ////////////////////////////////////////////////
 const app = express()
 const port = 3000
 
@@ -34,7 +49,7 @@ app.use(express.static('public'));
 app.get('/', (req, res) => {
    res.send('Hello World')
 })
-   app.get('/error', (req, res) => {  // https://expressjs.com/en/guide/error-handling.html#:~:text=Error%20Handling%20refers%20to%20how,your%20own%20to%20get%20started.
+app.get('/error', (req, res) => {  // https://expressjs.com/en/guide/error-handling.html#:~:text=Error%20Handling%20refers%20to%20how,your%20own%20to%20get%20started.
    throw new Error('BROKEN')        
 })
 app.get('/Favorietenscherm', (req, res) => {
@@ -47,3 +62,4 @@ app.get('/login', (req, res) => {
 app.listen(port, () => {
    console.log(`Webserver running on port localhost:${port}`)
 })
+
