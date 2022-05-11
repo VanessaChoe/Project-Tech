@@ -8,8 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-     "type": "module",
-     "url": "module+http://localhost:3000/"
+     "type": "git",
+     "url": "git+https://github.com/VanessaChoe/Project-Tech.git"
   },
   "keywords": [
     "Filteren",
