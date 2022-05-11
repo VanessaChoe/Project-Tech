@@ -7,10 +7,6 @@
     "dev": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  // "repository": {
-  //   "type": "git",
-  //   "url": "git+https://github.com/VanessaChoe/Project-Tech.git"
-  // },
   "repository": {
      "type": "module",
      "url": "module+http://localhost:3000/"
