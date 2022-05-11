@@ -10,7 +10,7 @@ const publicpath = path.resolve(__dirname,'public')
 
 app.use('publicpath',express.static('Images'));
 
-<img src= "public/America.jpg"></img>
+<img src="public/America.jpg"></img>
 /////////////////////////////////////////////////
 // app.get('/', (req, res) => {
 //   res.send('Hello World!')
