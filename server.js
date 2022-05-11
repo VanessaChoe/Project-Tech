@@ -34,6 +34,9 @@ app.use(express.static('public'));
 app.get('/', (req, res) => {
    res.send('Hello World')
 })
+app.get('/Over', (req, res) => {
+  throw new Error('BROKEN') // Express will catch this on its own.
+})
 app.get('/about', (req, res) => {
   res.send('About')
 })
