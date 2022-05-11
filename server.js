@@ -18,5 +18,5 @@ app.listen(port, () => {
 })
 
 
-// http://localhost:3000/static/index.html
+// http://localhost:3000/Inlogscherm.html
 
