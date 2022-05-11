@@ -6,11 +6,11 @@ const port = 3000
 
 // ///////////////////////////////////////////////
 
-app.use('/static', express.static('public'));
+app.use(express.static('public'));
 
 /////////////////////////////////////////////////
 app.get('/', (req, res) => {
-  res.send('Hello World!!')
+  res.send('Hello World!')
 })
 
 app.listen(port, () => {
