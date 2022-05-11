@@ -34,9 +34,9 @@ app.use(express.static('public'));
 app.get('/', (req, res) => {
    res.send('Hello World')
 })
-//   app.get('/over', (req, res) => {  // https://expressjs.com/en/guide/error-handling.html#:~:text=Error%20Handling%20refers%20to%20how,your%20own%20to%20get%20started.
-//   throw new Error('BROKEN')        
-// })
+   app.get('/error', (req, res) => {  // https://expressjs.com/en/guide/error-handling.html#:~:text=Error%20Handling%20refers%20to%20how,your%20own%20to%20get%20started.
+   throw new Error('BROKEN')        
+})
 app.get('/about', (req, res) => {
   res.send('About')
 })
