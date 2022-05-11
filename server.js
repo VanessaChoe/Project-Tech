@@ -32,7 +32,13 @@ const port = 3000
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-   res.send('Hello World!')
+   res.send('Hello World')
+})
+app.get('/about', (req, res) => {
+  res.send('About')
+})
+app.get('/login', (req, res) => {
+  res.send('Log in')
 })
 
 app.listen(port, () => {
