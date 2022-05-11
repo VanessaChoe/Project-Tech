@@ -1,13 +1,16 @@
-const express = require('express')
+const express = require('express');
 
 // ////////////////////////////////////////////////
 const app = express()
 const port = 3000
+const path = require("path");
+
+const publicpath = path.resolve(__dirname,'public')
 // ///////////////////////////////////////////////
 
-app.use('/public',express.static('Images'));
+app.use('publicpath',express.static('Images'));
 
-<img src= "/Images/America.jpg"></img>
+<img src= "public/America.jpg"></img>
 /////////////////////////////////////////////////
 // app.get('/', (req, res) => {
 //   res.send('Hello World!')
