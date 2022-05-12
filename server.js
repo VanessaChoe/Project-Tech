@@ -50,10 +50,16 @@ app.get('/', (req, res) => {
 app.get('/error', (req, res) => {  // https://expressjs.com/en/guide/error-handling.html#:~:text=Error%20Handling%20refers%20to%20how,your%20own%20to%20get%20started.
    throw new Error('BROKEN')        
 })
-app.get('/Favorietenscherm', (req, res) => {
+app.get('/inlogscherm', (req, res) => {
   res.send('About')
 })
-app.get('/login', (req, res) => {
+app.get('/filterscherm1', (req, res) => {
+  res.send('Log in')
+})
+app.get('/resultatenscherm', (req, res) => {
+  res.send('Log in')
+})
+app.get('/favorietenscherm', (req, res) => {
   res.send('Log in')
 })
 
