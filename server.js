@@ -51,9 +51,9 @@ app.listen(port, () => {
 })
 
 /* <!-- https://www.codegrepper.com/code-examples/html/how+to+link+button+to+another+page+in+javascript --> */
-function btnClicked(){
-  document.location.href="filterscherm1.html";
-}
+// function btnClicked(){
+//   document.location.href="filterscherm1.html";
+// }
 
 
 
