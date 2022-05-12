@@ -21,22 +21,6 @@
 // })
 
 
-
-
-
-
-
-
-
-
-import * as Sqrl from 'squirrelly'
-
-const myTemplate = 'My favorite template engine is {{it.favorite}}.'
-
-const result = Sqrl.render(myTemplate, {
-  favorite: 'Squirrelly, definitely'
-})
-
 const express = require('express');
 
 const app = express()
