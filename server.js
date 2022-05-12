@@ -51,16 +51,16 @@ app.get('/error', (req, res) => {  // https://expressjs.com/en/guide/error-handl
    throw new Error('BROKEN')        
 })
 app.get('/inlogscherm', (req, res) => {
-  res.send('About')
+  res.send('inlogscherm')
 })
 app.get('/filterscherm1', (req, res) => {
-  res.send('Log in')
+  res.send('filterscherm1')
 })
 app.get('/resultatenscherm', (req, res) => {
-  res.send('Log in')
+  res.send('resulatenscherm')
 })
 app.get('/favorietenscherm', (req, res) => {
-  res.send('Log in')
+  res.send('favorietenscherm')
 })
 
 app.listen(port, () => {
