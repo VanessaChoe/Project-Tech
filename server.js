@@ -20,19 +20,6 @@
 //   console.log(`Webserver running on port localhost:${port}`)
 // })
 
-
-
-
-
-
-
-
-
-
-
-
-import * as Sqrl from 'squirrelly'
-
 const myTemplate = 'My favorite template engine is {{it.favorite}}.'
 
 const result = Sqrl.render(myTemplate, {
@@ -62,4 +49,11 @@ app.get('/login', (req, res) => {
 app.listen(port, () => {
    console.log(`Webserver running on port localhost:${port}`)
 })
+
+/* <!-- https://www.codegrepper.com/code-examples/html/how+to+link+button+to+another+page+in+javascript --> */
+function btnClicked(){
+  document.location.href="filterscherm1.html";
+}
+
+
 
