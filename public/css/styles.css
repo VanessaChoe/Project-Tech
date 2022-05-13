@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
 
 .InlogschermBody{
-    background-image: url("../Images/BackgroundImage.jpg");
+    /* background-image: url("../Images/BackgroundImage.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: fixed; */
 
     font-family: "Lato";
+    background-color:#0A756D;
 }
 
 .InlogschermBody h1{
@@ -55,7 +56,7 @@ label{
     color: white;
 }
 
-button {
+.InlogschermBody button {
   color: black;
   padding: 0.875em 1.25em;
   margin: 2em 0;
@@ -65,7 +66,7 @@ button {
   width: 100%;
 }
 
-button:hover {
+.InlogschermBody button:hover {
   opacity: 0.8;
 }
 
@@ -87,6 +88,67 @@ button:hover {
     font-family: Lato-bold;
 }
 
+/* -filterschermManVrouw------------------------------------------------------------- */
+
+.filterschermGeslachtBody{
+    background-color:#F7F7F7;
+}
+
+.filterschermGeslachtBody h1{
+    text-align: center;
+    color: #0A756D;
+    font-size: 25pt;
+    font-family: "Lato-Bold";
+    margin-top: 1.2em;
+}
+.filterschermGeslachtBody h1 span{
+    color: black;
+}
+.filterschermGeslachtBody h2{
+    text-align: center;
+    color: black;
+    font-size: 15pt;
+    font-family: "Lato-Semibold";;
+    margin-top: -0.9em;
+}
+
+.filterschermGeslachtBody nav{
+    display: flex;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 58%;
+}
+.filterschermGeslachtBody nav img{
+    width: 1.5em;
+    height: 1.5em;
+    margin-top: 1.5em;
+}
+
+.filterschermGeslachtBody main section:first-of-type{
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    grid-gap: 1.5em;
+    margin-top:  3em;
+}
+.filterschermGeslachtBody main section:first-of-type button{  
+    background-color:  #0A756D;
+    font-family: "Lato-Regular";
+    font-size: 1.1em;
+    color: white;
+    padding: 0.875em 1.25em;
+    margin: 4.5em 0;
+    border: none;
+    border-radius: 0.4em;
+    cursor: pointer;
+    width: 8em;
+    height: 8em;
+    filter: drop-shadow(0px 1px 3px lightgrey);
+}
+.filterschermGeslachtBody main section:first-of-type button:hover{
+    transform: scale(1.06);
+}
 
 /* -Filterscherm1---------------------------------------------------------------------- */
 
@@ -130,8 +192,8 @@ button:hover {
     display: none;
 }
 
-.Filterscherm1Body section:first-of-type{ /* https://codepen.io/DuskoStamenic/pen/zYpXrZB?editors=1100 */
-    margin-top: 2em;
+/* .Filterscherm1Body section:first-of-type{ https://codepen.io/DuskoStamenic/pen/zYpXrZB?editors=1100 */
+    /* margin-top: 2em;
     margin-left: 1.5em;
     overflow-x: scroll;
     scrollbar-width: none;
@@ -159,15 +221,15 @@ button:hover {
     color: white;
     text-decoration: none;
     background-color:#0A756D;
-}
+} */
 
 
-.Filterscherm1Body section:nth-of-type(2){
+.Filterscherm1Body section:first-of-type{
     display: grid;
     justify-content: center;
     grid-template-columns: 1fr 1fr;
 }
-.Filterscherm1Body section:nth-of-type(2) img{
+.Filterscherm1Body section:first-of-type img{
     width: 11em;
     height: 7em;
     margin-bottom: 0.2em;
@@ -175,7 +237,7 @@ button:hover {
     filter: drop-shadow(0px 1px 3px lightgrey);
     opacity: 0.95;
 }
-.Filterscherm1Body section:nth-of-type(2) img:hover{
+.Filterscherm1Body section:first-of-type img:hover{
     opacity: 0.7;
     transform: scale(1.06);
 }

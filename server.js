@@ -37,14 +37,23 @@ app.get('/error', (req, res) => {  // https://expressjs.com/en/guide/error-handl
 app.get('/inlogscherm', (req, res) => {
   res.send('inlogscherm')
 })
-app.get('/filterscherm1', (req, res) => {
-  res.send('filterscherm1')
+app.get('/keuzescherm', (req, res) => {
+  res.send('keuzescherm')
 })
-app.get('/resultatenscherm', (req, res) => {
-  res.send('resulatenscherm')
+app.get('/filterschermGeslacht', (req, res) => {
+  res.send('filterschermGeslacht')
 })
-app.get('/favorietenscherm', (req, res) => {
-  res.send('favorietenscherm')
+app.get('/filterschermContinenten', (req, res) => {
+  res.send('filterschermContinenten')
+})
+app.get('/filterschermLanden', (req, res) => {
+  res.send('filterschermLanden')
+})
+app.get('/matchTravelbuddy', (req, res) => {
+  res.send('matchTravelbuddy')
+})
+app.get('/mijnTravelBuddiesMatches', (req, res) => {
+  res.send('mijnTravelBuddiesMatches')
 })
 
 app.listen(port, () => {
