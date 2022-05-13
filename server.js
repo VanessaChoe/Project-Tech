@@ -29,15 +29,9 @@ const port = 3000
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
-app.get('/', (req, res) => {
-   res.render('Hello World')
-})
-app.get('/error', (req, res) => {  // https://expressjs.com/en/guide/error-handling.html#:~:text=Error%20Handling%20refers%20to%20how,your%20own%20to%20get%20started.
-   throw new Error('BROKEN')        
-})
-app.get('/inlogscherm', (req, res) => {
-  res.render('inlogscherm')
-})
+// app.get('/error', (req, res) => {  // https://expressjs.com/en/guide/error-handling.html#:~:text=Error%20Handling%20refers%20to%20how,your%20own%20to%20get%20started.
+//    throw new Error('BROKEN')        
+// })
 app.get('/keuzescherm', (req, res) => {
   res.render('keuzescherm')
 })
@@ -47,11 +41,8 @@ app.get('/filterschermGeslacht', (req, res) => {
 app.get('/filterschermContinenten', (req, res) => {
   res.render('filterschermContinenten')
 })
-app.get('/filterschermLanden', (req, res) => {
-  res.render('filterschermLanden')
-})
-app.get('/matchTravelbuddy', (req, res) => {
-  res.render('matchTravelbuddy')
+app.get('/matchTravelBuddy', (req, res) => {
+  res.render('matchTravelBuddy')
 })
 app.get('/mijnTravelBuddiesMatches', (req, res) => {
   res.render('mijnTravelBuddiesMatches')
@@ -60,6 +51,5 @@ app.get('/mijnTravelBuddiesMatches', (req, res) => {
 app.listen(port, () => {
    console.log(`Webserver running on port localhost:${port}`)
 })
-
 
 
