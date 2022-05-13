@@ -114,6 +114,14 @@
     font-weight: 400;
     margin-top: -1.5em;
     }
+    .keuzeschermBody h3{
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    margin-top: -1em;
+    }
 
     .keuzeschermBody nav{
     display: flex;
@@ -142,20 +150,22 @@
     grid-gap: 1.5em;
     margin-top: 9.3em;
     }
-    .keuzeschermBody main section button {
+    .keuzeschermBody main section a {
     background-color: #FF8006;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 0.9em;
+    text-align: center;
     color: white;
     border: none;
     border-radius: 0.4em;
     cursor: pointer;
     width: 12em;
-    height: 5em;
     margin: auto;
+    padding: 2em;
+    text-decoration: none;
     }
-    .keuzeschermBody main section button:hover {
+    .keuzeschermBody main section a:hover {
     background-color: white;
     color: #FF8006; 
     transform: scale(1.06);
@@ -197,16 +207,22 @@
     grid-gap: 58%;
     }
     .filterschermGeslachtBody nav button{
-    background-color: #FF8006;
-    border: none;
-    border-radius: 50%;
-    width: 3.6em;
-    height: 3.6em;
-    margin: 1em auto;
+        background-color: #FF8006;
+        border: none;
+        border-radius: 50%;
+        width: 3.6em;
+        height: 3.6em;
+        margin-top: 1em;
+        margin-left: auto;
+        margin-right: 2em;
     }
-    .filterschermGeslachtBody nav img{
-    width: 1.6em;
-    height: 1.6em;
+    .filterschermGeslachtBody nav button img{
+        display:flex;
+        position: absolute;
+        width: 1.6em;
+        height: 1.6em;
+        margin-top: -0.8em;
+        margin-left: 0.5em;
     }   
 
     .filterschermGeslachtBody main section{
@@ -215,20 +231,22 @@
     grid-gap: 1.5em;
     margin-top: 9.4em;
     }
-    .filterschermGeslachtBody main section button {
+    .filterschermGeslachtBody main section a {
     background-color: #FF8006;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 0.9em;
+    text-align: center;
     color: white;
     border: none;
     border-radius: 0.4em;
     cursor: pointer;
     width: 12em;
-    height: 5em;
     margin: auto;
+    padding: 2em;
+    text-decoration: none;
     }
-    .filterschermGeslachtBody main section button:hover {
+    .filterschermGeslachtBody main section a:hover {
     background-color: white;
     color: #FF8006; 
     transform: scale(1.06);
@@ -274,11 +292,14 @@
     border-radius: 50%;
     width: 3.6em;
     height: 3.6em;
-    margin: 1em auto;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: 2em;
     }
-    .filterschermContinentenBody nav img{
+    .filterschermContinentenBody nav button img{
     width: 1.6em;
     height: 1.6em;
+    margin-top: 0.5em;
     }           
 
     .filterschermContinentenBody main section{
@@ -287,25 +308,27 @@
     grid-gap: 1.5em;
     margin-top: 3em;
     }
-    .filterschermContinentenBody main section button{
+    .filterschermContinentenBody main section a{
     background-color: #FF8006;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 0.9em;
+    text-align: center;
     color: white;
     border: none;
     border-radius: 0.4em;
     cursor: pointer;
-    width: 17em;
-    height: 5em;
+    width: 12em;
     margin: auto;
+    padding: 2em;
+    text-decoration: none;
     }
-    .filterschermContinentenBody main section button:hover{
+    .filterschermContinentenBody main section a:hover{
     background-color: white;
     color: #FF8006; 
     transform: scale(1.06);
     }
-    .filterschermContinentenBody main section button:nth-child(7){
+    .filterschermContinentenBody main section a:nth-child(7){
     margin-bottom: 4em;
     }
 /* ----------------------------------------------------------------------------------------------------------------- */
@@ -355,18 +378,19 @@
     grid-gap: 58%;
     }
     .matchTravelBuddyBody nav button{
-    background-color: #FF8006;
-    border: none;
-    border-radius: 50%;
-    width: 3.6em;
-    height: 3.6em;
-    margin-top: 1em;
-    margin-left: auto;
-    margin-right: 2em;
+        background-color: #FF8006;
+        border: none;
+        border-radius: 50%;
+        width: 3.6em;
+        height: 3.6em;
+        margin-top: 1em;
+        margin-left: auto;
+        margin-right: 2em;
     }
-    .matchTravelBuddyBody nav img{
-    width: 1.6em;
-    height: 1.6em;
+    .matchTravelBuddyBody nav button img{
+        width: 1.6em;
+        height: 1.6em;
+        margin-top: 0.5em;
     }           
     
     .matchTravelBuddyBody main section{
@@ -374,24 +398,6 @@
     grid-template-columns: 1fr;
     grid-gap: 0.5em;
     margin-top: 3em;
-    }
-    .matchTravelBuddyBody main section button{
-    background-color: #FF8006;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: 0.9em;
-    color: white;
-    border: none;
-    border-radius: 0.4em;
-    cursor: pointer;
-    width: 17em;
-    height: 5em;
-    margin: auto;
-    }
-    .matchTravelBuddyBody main section button:hover{
-    background-color: white;
-    color: #FF8006; 
-    transform: scale(1.06);
     }
 
     .matchTravelBuddyBody main section{
@@ -406,20 +412,22 @@
     height: 14em;
     margin: auto;
     }
-    .matchTravelBuddyBody main section button{
+    .matchTravelBuddyBody main section a{
     background-color: #FF8006;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 0.9em;
+    text-align: center;
     color: white;
     border: none;
     border-radius: 0.4em;
     cursor: pointer;
-    width: 15em;
-    height: 3em;
+    width: 12em;
     margin: auto;
+    padding: 1em;
+    text-decoration: none;
     }
-    .matchTravelBuddyBody main section button:hover{
+    .matchTravelBuddyBody main section a:hover{
     background-color: white;
     color: #FF8006; 
     transform: scale(1.06);
