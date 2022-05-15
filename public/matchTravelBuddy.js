@@ -1,6 +1,6 @@
 document.getElementById("ButtonHome").onclick = function () {
-    location.href = "/";
+	location.href = "/";
 };
 document.getElementById("ButtonNavUitloggen").onclick = function () {
-    location.href = "/";
+	location.href = "/";
 };

@@ -1,6 +1,6 @@
 document.getElementById("ButtonTerug").onclick = function () {
-    window.history.back()
+	window.history.back();
 };
 document.getElementById("ButtonNavUitloggen").onclick = function () {
-    location.href = "/";
+	location.href = "/";
 };
