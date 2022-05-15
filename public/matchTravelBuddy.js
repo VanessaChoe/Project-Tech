@@ -1,6 +1,6 @@
 document.getElementById("ButtonHome").onclick = function () {
-    location.href = "filterschermGeslacht.html";
+    location.href = "/";
 };
 document.getElementById("ButtonNavUitloggen").onclick = function () {
-    location.href = "inlogscherm.html";
+    location.href = "/";
 };

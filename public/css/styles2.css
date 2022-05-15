@@ -121,28 +121,7 @@
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     margin-top: -1em;
-    }
-
-    .keuzeschermBody nav{
-    display: flex;
-    text-align: center;
-    display: grid;
-    grid-template-columns: 1fr;
-    }
-    .keuzeschermBody nav button{
-    background-color: #FF8006;
-    border: none;
-    border-radius: 50%;
-    width: 3.6em;
-    height: 3.6em;
-    margin-top: 1em;
-    margin-left: auto;
-    margin-right: 2em;
-    }
-    .keuzeschermBody nav img{
-    width: 1.6em;
-    height: 1.6em;
-    }   
+    }  
 
     .keuzeschermBody main section{
     display: grid;
@@ -205,24 +184,21 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 58%;
+    margin-top: 2em;
     }
     .filterschermGeslachtBody nav button{
-        background-color: #FF8006;
-        border: none;
-        border-radius: 50%;
-        width: 3.6em;
-        height: 3.6em;
-        margin-top: 1em;
-        margin-left: auto;
-        margin-right: 2em;
+    background-color: #FF8006;
+    border: none;
+    border-radius: 50%;
+    width: 3.6em;
+    height: 3.6em;
+    margin-top: 1em;
+    margin: auto;
     }
     .filterschermGeslachtBody nav button img{
-        display:flex;
-        position: absolute;
-        width: 1.6em;
-        height: 1.6em;
-        margin-top: -0.8em;
-        margin-left: 0.5em;
+    width: 1.6em;
+    height: 1.6em;
+    margin-top: 0.5em;
     }   
 
     .filterschermGeslachtBody main section{
@@ -280,11 +256,11 @@
     }
 
     .filterschermContinentenBody nav{
-    display: flex;
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 58%;
+    margin-top: 2em;
     }
     .filterschermContinentenBody nav button{
     background-color: #FF8006;
@@ -293,8 +269,7 @@
     width: 3.6em;
     height: 3.6em;
     margin-top: 1em;
-    margin-left: auto;
-    margin-right: 2em;
+    margin: auto;
     }
     .filterschermContinentenBody nav button img{
     width: 1.6em;
@@ -376,21 +351,21 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 58%;
+    margin-top: 2em;
     }
     .matchTravelBuddyBody nav button{
-        background-color: #FF8006;
-        border: none;
-        border-radius: 50%;
-        width: 3.6em;
-        height: 3.6em;
-        margin-top: 1em;
-        margin-left: auto;
-        margin-right: 2em;
+    background-color: #FF8006;
+    border: none;
+    border-radius: 50%;
+    width: 3.6em;
+    height: 3.6em;
+    margin-top: 1em;
+    margin: auto;
     }
     .matchTravelBuddyBody nav button img{
-        width: 1.6em;
-        height: 1.6em;
-        margin-top: 0.5em;
+    width: 1.6em;
+    height: 1.6em;
+    margin-top: 0.5em;
     }           
     
     .matchTravelBuddyBody main section{
@@ -467,6 +442,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 58%;
+    margin-top: 2em;
     }
     .mijnTravelBuddiesMatchesBody nav button{
     background-color: #FF8006;
@@ -475,12 +451,12 @@
     width: 3.6em;
     height: 3.6em;
     margin-top: 1em;
-    margin-left: auto;
-    margin-right: 2em;
+    margin: auto;
     }
     .mijnTravelBuddiesMatchesBody nav img{
     width: 1.6em;
     height: 1.6em;
+    margin-top: 0.5em;
     }           
 
     .mijnTravelBuddiesMatchesBody main section{
