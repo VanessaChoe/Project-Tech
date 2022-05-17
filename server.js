@@ -1,12 +1,26 @@
 const express = require("express");
 const app = express();
 const port = 3000;
+const path = require('path');
 
 app.use(express.static("public"));
+
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
 	res.render("keuzescherm");
+});
+app.get("/mijnTravelBuddiesMatches", (req, res) => {
+
+	const match = {
+		image: "/images/eline.jpg",
+		data: "Eline - Afrika, Marokko",
+
+	}
+
+	res.render("mijnTravelBuddiesMatches",{matchEline:match});
 });
 app.get("/filterschermGeslacht", (req, res) => {
 	res.render("filterschermGeslacht");
@@ -19,12 +33,8 @@ app.get("/matchTravelBuddy", (req, res) => {
 		data: "iets",
 	});
 });
-app.get("/mijnTravelBuddiesMatches", (req, res) => {
-	res.render("mijnTravelBuddiesMatches", {
-		data: "Robert",
-	});
-});
 
 app.listen(port, () => {
 	console.log(`Webserver running on port localhost:${port}`);
 });
+
