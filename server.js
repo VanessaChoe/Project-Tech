@@ -10,29 +10,32 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-	res.render("keuzescherm");
-});
-app.get("/mijnTravelBuddiesMatches", (req, res) => {
-
-	const match = {
-		image: "/images/eline.jpg",
-		data: "Eline - Afrika, Marokko",
-
-	}
-
-	res.render("mijnTravelBuddiesMatches",{matchEline:match});
-});
-app.get("/filterschermGeslacht", (req, res) => {
-	res.render("filterschermGeslacht");
-});
-app.get("/filterschermContinenten", (req, res) => {
-	res.render("filterschermContinenten");
+	res.render("Travelbuddy");
 });
 app.get("/matchTravelBuddy", (req, res) => {
-	res.render("matchTravelBuddy", {
-		data: "iets",
+ 	res.render("matchTravelBuddy", {
 	});
-});
+// app.get("/geslacht", (req, res) => {
+
+// 	const match = {
+// 		image: "/images/eline.jpg",
+// 		data: "Eline - Afrika, Marokko",
+
+// 	}
+
+// 	res.render("geslacht",{matchEline:match});
+// });
+// app.get("/filterschermGeslacht", (req, res) => {
+// 	res.render("filterschermGeslacht");
+// });
+// app.get("/filterschermContinenten", (req, res) => {
+// 	res.render("filterschermContinenten");
+// });
+// app.get("/matchTravelBuddy", (req, res) => {
+// 	res.render("matchTravelBuddy", {
+// 		data: "iets",
+// 	});
+// });
 
 app.listen(port, () => {
 	console.log(`Webserver running on port localhost:${port}`);

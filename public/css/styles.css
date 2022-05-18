@@ -1,7 +1,111 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
 
+    body{
+    font-family: 'Lato', sans-serif;
+    background-color:#06BADD; 
+    }
+
+    body h1{
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    font-size: 1.8em;
+    margin-top: 1.5em;
+    }
+    body h2{
+    color: white;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: #FF8006;
+    font-size: 3em;
+    font-weight: 600;
+    margin-top: -0.5em;
+    }
+    body h3{
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    margin-top: 5em;
+    }
+
+
+    body form{
+    margin-top: 2em;
+    }
+    body form div{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    }
+    body form div:first-of-type{
+    margin-bottom: -3em;
+    }
+    body form div label{
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    border: 0.1em solid white;
+    padding: 1.5em 1.25em;
+    margin: 2em 0;
+    border-radius: 0.4em;
+    cursor: pointer;
+    width: 11em;
+    text-align: center;
+    }
+
+    body section form input[type="radio" i] {
+    pointer-events: none;
+    visibility: hidden;
+    opacity:0;
+    margin-left: -1.3em;
+    }
+    body form input[type="radio"]:hover + label {
+    transform: scale(1.06);
+    }
+    body form input[type="radio"]:checked + label {
+    border: #FF8006 0.3em solid;
+    background-color: white;
+    color: #FF8006;
+    transform: scale(1.06);
+    }
+
+    body form button{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 2em;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    background-color: #FF8006;
+    padding: 1.8em 1.25em;
+    border: none;
+    border-radius: 0.4em;
+    cursor: pointer;
+    width: 16.4em;
+    }
+    body form button:hover{
+    background-color: white;
+    color: #FF8006;
+    }
+
+    body section:nth-child(3) div{
+        
+    }
+
+
+
+
+
+
+
+
 /* inlogscherm.html--------------------------------------------------------------------------------------------------- */
-    .inlogschermBody {
+    /* .inlogschermBody {
     font-family: 'Lato', sans-serif;
     background-color:#06BADD;
     }
@@ -24,9 +128,9 @@
     font-size: 2em;
     font-family: 'Lato', sans-serif;
     font-weight: 700;
-    }
+    } */
     /* Formulier----------------------------------------------------------------------------------------------------- */
-    .inlogschermBody form{
+    /* .inlogschermBody form{
     margin: 2em;
     }
     .inlogschermBody input[type=text], input[type=password] {
@@ -40,8 +144,8 @@
     background-color: transparent;
     }
 
-    ::-webkit-input-placeholder { /* https://www.w3schools.com/cssref/sel_placeholder.asp */
-    color: white;
+    ::-webkit-input-placeholder { https://www.w3schools.com/cssref/sel_placeholder.asp */
+    /* color: white;
     margin-left: -1;
     }
     .inlogschermBody label{
@@ -90,7 +194,7 @@
 /* ----------------------------------------------------------------------------------------------------------------- */
 
 /* keuzescherm.html------------------------------------------------------------------------------------------------- */
-    .keuzeschermBody {
+    /* .keuzeschermBody {
     font-family: "Lato";
     background-color:#06BADD;
     }
@@ -148,12 +252,12 @@
     background-color: white;
     color: #FF8006; 
     transform: scale(1.06);
-    }
+    }  */
 /* ----------------------------------------------------------------------------------------------------------------- */
 
 /* filterschermGeslacht.html---------------------------------------------------------------------------------------- */
 
-    .filterschermGeslachtBody {
+    /* .filterschermGeslachtBody {
     font-family: "Lato";
     background-color:#06BADD;
     }
@@ -226,11 +330,11 @@
     background-color: white;
     color: #FF8006; 
     transform: scale(1.06);
-    }
+    } */
 /* ----------------------------------------------------------------------------------------------------------------- */
 
 /* filterschermContinenten.html------------------------------------------------------------------------------------- */
-    .filterschermContinentenBody {
+    /* .filterschermContinentenBody {
     font-family: "Lato";
     background-color:#06BADD;
     }
@@ -406,12 +510,12 @@
     background-color: white;
     color: #FF8006; 
     transform: scale(1.06);
-    }
+    } */
 /* ----------------------------------------------------------------------------------------------------------------- */
 
 /* mijnTravelBuddiesMatches.html------------------------------------------------------------------------------------ */
 
-    .mijnTravelBuddiesMatchesBody {
+    /* .mijnTravelBuddiesMatchesBody {
     font-family: "Lato";
     background-color:#06BADD;
     }
@@ -496,5 +600,5 @@
     .mijnTravelBuddiesMatchesBody main section:hover{
     color: #FF8006; 
     transform: scale(1.06);
-    }
+    } */
 /* ----------------------------------------------------------------------------------------------------------------- */
