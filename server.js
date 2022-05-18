@@ -1,20 +1,20 @@
-const express = require("express");
-const app = express();
-const port = 3000;
-const path = require('path');
+// const express = require("express");
+// const app = express();
+// const port = 3000;
+// const path = require('path');
 
-app.use(express.static("public"));
+// app.use(express.static("public"));
 
-app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.static(path.join(__dirname, 'public')));
 
-app.set("view engine", "ejs");
+// app.set("view engine", "ejs");
 
-app.get("/", (req, res) => {
-	res.render("Travelbuddy");
-});
-app.get("/matchTravelBuddy", (req, res) => {
- 	res.render("matchTravelBuddy", {
-	});
+// app.get("/", (req, res) => {
+// 	res.render("Travelbuddy");
+// });
+// app.get("/matchTravelBuddy", (req, res) => {
+//  	res.render("matchTravelBuddy", {
+// 	});
 // app.get("/geslacht", (req, res) => {
 
 // 	const match = {
@@ -37,7 +37,24 @@ app.get("/matchTravelBuddy", (req, res) => {
 // 	});
 // });
 
-app.listen(port, () => {
-	console.log(`Webserver running on port localhost:${port}`);
-});
+// app.listen(port, () => {
+// 	console.log(`Webserver running on port localhost:${port}`)
+// })
 
+const express = require('express')
+const app = express()
+const port = 3000
+
+app.use(express.static("public"));
+app.set("view engine", "ejs");
+
+app.get('/homepage', (req, res) => {
+  res.render('homepage')
+})
+// app.get('/mijnTravelBuddiesMatches', (req, res) => {
+// 	res.render('mijnTravelBuddiesMatches')
+//   })
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})

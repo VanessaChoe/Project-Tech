@@ -12,6 +12,6 @@ console.log("index.js");
 
 // NieuweTravelBuddyButton.addEventListener('click' , verderNaarGeslacht) ;
 
-document.getElementById("NieuweTravelBuddyButton").onclick = function () {
-    location.href = "#geslachtSection";
-};
+// document.getElementById("NieuweTravelBuddyButton").onclick = function () {
+//     location.href = "#geslachtSection";
+// };

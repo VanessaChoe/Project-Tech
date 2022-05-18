@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TravelBuddy</title>
+        <link rel='stylesheet' href='css/styles.css'/>
+        <link rel="stylesheet" href="https://use.typekit.net/dew5tlo.css">
+    </head>
+
+<body>
+    <main>
+        
+        <section id="keuzeSection">
+            <h1>TravelBuddy</h1>
+            <h2>Maak hieronder je keuze.</h2>
+            <div class="containerKeuze">
+
+                <form action="/country" method="POST">
+
+                    <div>
+                        <input type="radio" name="keuze" id="Man" value="Man">    
+                        <label id="NieuweTravelBuddyButton"for="Man">Nieuwe TravelBuddy</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="keuze" id="Vrouw" value="Vrouw">
+                        <label for="Vrouw">Mijn TravelBuddy matches</label>
+                    </div>
+    
+                </form>
+
+                <a class="scroll-down-button" href="#geslachtSection"></a>
+
+            </div>
+        </section>
+
+        <section id="geslachtSection">
+            <h2>Kies het geslacht van je toekomstige TravelBuddy</h2>
+            <div class="containerGeslacht">
+
+                <form action="/country" method="POST">
+
+                    <div>
+                        <input type="radio" name="Geslacht" id="Man" value="Man">    
+                        <label id="man"for="man">Man</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="Geslacht" id="Vrouw" value="Vrouw">
+                        <label id="vrouw" for="vrouw">Vrouw</label>
+                    </div>
+    
+                </form>
+
+                <a class="scroll-down-button" href="#continentenSection"></a>
+
+            </div>
+        </section>
+
+        <section id="continentenSection">
+            <h2>Naar welk continent wil je op reis gaan?</h2>
+            <div class="containerContinenten">
+
+                <form action="/country" method="POST">
+
+                    <div>
+                        <input type="radio" name="Geslacht" id="Man" value="Man">    
+                        <label id="man"for="man">Afrika</label>
+        
+                        <input type="radio" name="Geslacht" id="Vrouw" value="Vrouw">
+                        <label id="vrouw" for="vrouw">Amerika</label>
+                
+                        <input type="radio" name="Geslacht" id="Man" value="Man">    
+                        <label id="man"for="man">Afrika</label>
+                    </div>
+                
+                    <div>
+                        <input type="radio" name="Geslacht" id="Vrouw" value="Vrouw">
+                        <label id="vrouw" for="vrouw">Amerika</label>
+
+                        <input type="radio" name="Geslacht" id="Vrouw" value="Vrouw">
+                        <label id="vrouw" for="vrouw">Amerika</label>
+
+                        <input type="radio" name="Geslacht" id="Vrouw" value="Vrouw">
+                        <label id="vrouw" for="vrouw">Amerika</label>
+
+                    </div>
+
+                    <div>
+                        <input type="radio" name="Geslacht" id="Vrouw" value="Vrouw">
+                        <label id="vrouw" for="vrouw">Amerika</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="Geslacht" id="Vrouw" value="Vrouw">
+                        <label id="vrouw" for="vrouw">Maak TravelBuddy match</label>
+                    </div>
+
+                </form>
+
+               
+
+            </div>
+        </section>
+
+    
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
