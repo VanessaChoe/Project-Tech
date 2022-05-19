@@ -1,52 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>TravelBuddy</title>
-        <link rel='stylesheet' href='css/styles2.css'/>
-        <link rel="stylesheet" href="https://use.typekit.net/dew5tlo.css">
-    </head>
+    
+ <%- include('partials/head') %>
 
-<body>
+<body class="homepageBody">
     <main>
         
         <section id="keuzeSection">
             <h1>TravelBuddy</h1>
             <h2>Maak hieronder je keuze.</h2>
-            <div class="containerKeuze">
-
-                <form action="/country" method="POST">
-
+        
                     <div>
-                        <input type="radio" name="keuze" id="Man" value="Man">    
-                        <label id="NieuweTravelBuddyButton"for="Man">Nieuwe TravelBuddy</label>
+                        <a href="#geslachtSection">Nieuwe TravelBuddy</a>
+                        <a href="mijnTravelBuddiesMatches">Mijn TravelBuddy matches</a>
                     </div>
-                    <div>
-                        <input type="radio" name="keuze" id="Vrouw" value="Vrouw">
-                        <label for="Vrouw">Mijn TravelBuddy matches</label>
-                    </div>
-    
-                </form>
 
-                <a class="scroll-down-button" href="#geslachtSection"></a>
-
-            </div>
         </section>
 
         <section id="geslachtSection">
+            <h1>TravelBuddy</h1>
             <h2>Kies het geslacht van je toekomstige TravelBuddy</h2>
             <div class="containerGeslacht">
 
-                <form action="/country" method="POST">
+                <form action="/geslacht" method="POST">
 
                     <div>
-                        <input type="radio" name="Geslacht" id="Man" value="Man">    
-                        <label id="man"for="man">Man</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="Geslacht" id="Vrouw" value="Vrouw">
-                        <label id="vrouw" for="vrouw">Vrouw</label>
+                        <input type="radio" name="Geslacht" id="vrouw" value="Vrouw">    
+                        <label id="labelVrouw"for="labelVrouw">Vrouw</label>
+            
+                        <input type="radio" name="Geslacht" id="man" value="Man">    
+                        <label id="labelMan"for="labelMan">Man</label>
                     </div>
     
                 </form>
@@ -57,42 +40,43 @@
         </section>
 
         <section id="continentenSection">
+            <h1>TravelBuddy</h1>
             <h2>Naar welk continent wil je op reis gaan?</h2>
             <div class="containerContinenten">
 
-                <form action="/country" method="POST">
+                <form action="/continenten" method="POST">
 
                     <div>
-                        <input type="radio" name="Geslacht" id="Man" value="Man">    
-                        <label id="man"for="man">Afrika</label>
+                        <input type="radio" name="continenten" id="Afrika" value="Afrika">    
+                        <label id="labelAfrika" for="labelAfrika">Afrika</label>
         
-                        <input type="radio" name="Geslacht" id="Vrouw" value="Vrouw">
-                        <label id="vrouw" for="vrouw">Amerika</label>
+                        <input type="radio" name="continenten" id="Amerika" value="Amerika">
+                        <label id="labelAmerika" for="labelAmerika">Amerika</label>
                 
-                        <input type="radio" name="Geslacht" id="Man" value="Man">    
-                        <label id="man"for="man">Afrika</label>
+                        <input type="radio" name="continenten" id="Azië" value="Azië">    
+                        <label id="labelAzië" for="labelAzië">Azië</label>
                     </div>
                 
                     <div>
-                        <input type="radio" name="Geslacht" id="Vrouw" value="Vrouw">
-                        <label id="vrouw" for="vrouw">Amerika</label>
+                        <input type="radio" name="continenten" id="Europa" value="Europa">
+                        <label id="labelEuropa" for="labelEuropa">Europa</label>
 
-                        <input type="radio" name="Geslacht" id="Vrouw" value="Vrouw">
-                        <label id="vrouw" for="vrouw">Amerika</label>
+                        <input type="radio" name="continenten" id="Antartica" value="Antartica">
+                        <label id="labelAntartica" for="labelAntartica">Antartica</label>
 
-                        <input type="radio" name="Geslacht" id="Vrouw" value="Vrouw">
-                        <label id="vrouw" for="vrouw">Amerika</label>
+                        <input type="radio" name="continenten" id="Noord-Amerika" value="Noord-Amerika">
+                        <label id="labelNoord-Amerika" for="labelNoord-Amerika">Noord-Amerika</label>
 
                     </div>
 
                     <div>
-                        <input type="radio" name="Geslacht" id="Vrouw" value="Vrouw">
-                        <label id="vrouw" for="vrouw">Amerika</label>
+                        <input type="radio" name="continenten" id="Vrouw" value="Zuid-Amerika">
+                        <label id="labelZuid-Amerika" for="labelZuid-Amerika">Zuid-Amerika</label>
                     </div>
 
                     <div>
-                        <input type="radio" name="Geslacht" id="Vrouw" value="Vrouw">
-                        <label id="vrouw" for="vrouw">Maak TravelBuddy match</label>
+                        <input type="radio" name="submitButton" id="submitButton" value="Submit">
+                        <label id="labelSubmitButton" for="labelSubmitButton">Maak TravelBuddy match</label>
                     </div>
 
                 </form>
@@ -102,9 +86,9 @@
             </div>
         </section>
 
-    
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     </main>
 
-    <script src="index.js"></script>
+    <script src="public/index.js"></script>
 </body>
 </html>
