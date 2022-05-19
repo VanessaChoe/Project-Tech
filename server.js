@@ -66,8 +66,4 @@ app.get('/mijnTravelBuddiesMatches', (req, res) => {
 
 app.post ("/geslacht", (req, res) => {
   res.send("geslacht")
-}
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
 })
