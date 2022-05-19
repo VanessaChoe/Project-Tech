@@ -44,7 +44,7 @@
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
-
+const dotenv = require('dotenv');
 // const { MongoClient, ServerApiVersion } = require('mongodb');
 // const uri = "mongodb+srv://VanessaChoe:<Jovugi81!>@cluster0.quc5i.mongodb.net/?retryWrites=true&w=majority";
 // const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
