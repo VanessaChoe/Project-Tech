@@ -60,9 +60,17 @@ const app = express();
 
 const port = process.env.PORT || 3000;
 
-import 'dotenv/config' // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
-import express from 'express';
 
+// import { Client } from 'best-error-reporting-service'
+
+// export default new Client(process.env.API_KEY)
+
+// import 'dotenv/config'
+
+// import errorReporter from './errorReporter.mjs'
+// errorReporter.report(new Error('documented example'))
+
+// mongodb connectie///////////////////////////////////////////////////////////////////////
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const uri = "mongodb+srv://VanessaChoe:ster12345@cluster0.quc5i.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
