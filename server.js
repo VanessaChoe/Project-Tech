@@ -72,7 +72,6 @@ const port = process.env.PORT || 3000;
 
 // mongodb connectie///////////////////////////////////////////////////////////////////////
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://VanessaChoe:ster12345@cluster0.quc5i.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 client.connect(err => {
   const collection = client.db("test").collection("devices");
@@ -90,6 +89,10 @@ app.get('/', (req, res) => {
 })
 app.get('/mijnTravelBuddiesMatches', (req, res) => {
   res.render('mijnTravelBuddiesMatches')
+
+  const match = {
+     		image: "/images/eline.jpg",
+     		data: "Eline - Afrika, Marokko",
 })
 
 app.post ("/geslacht", (req, res) => {
