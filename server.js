@@ -90,10 +90,11 @@ app.get('/', (req, res) => {
 app.get('/mijnTravelBuddiesMatches', (req, res) => {
   res.render('mijnTravelBuddiesMatches')
 
-  const match = {
-     		image: "/images/eline.jpg",
-     		data: "Eline - Afrika, Marokko",
-})
+  // const match = {
+  //    		image: "/images/eline.jpg",
+  //        data: "Eline - Afrika, Marokko",
+  // });
+});
 
 app.post ("/geslacht", (req, res) => {
   res.send("geslacht")
