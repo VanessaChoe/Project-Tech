@@ -39,6 +39,7 @@ section {
     font-size: 1.2em;
     color: white;
     justify-content: center;
+    text-align: center;
 }
 
 .homepageBody button{
@@ -89,6 +90,20 @@ section {
     margin-bottom: -3em;
     justify-content: center;
 }
+#keuzeSection div button{
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;   
+    border: 0.1em solid white;
+    padding: 2em 1.25em;
+    margin-bottom: 0.7em;
+    border-radius: 0.4em;
+    cursor: pointer;
+    width: 16.9em;
+    text-align: center;
+    font-size: 0.9em;
+    text-decoration: none;
+}
 #keuzeSection div a{
     color: white;
     font-family: 'Lato', sans-serif;
@@ -125,16 +140,15 @@ section {
     margin-left: -2.3em;
 }
 
-#geslachtSection .containerGeslacht form{
-    margin-top: 2em;
-    margin-left: 20%;
-}
 #geslachtSection .containerGeslacht form div{
     display: grid;
     list-style: none;
     justify-content: center;
-}   
-
+    margin-left: 2.45em;
+} 
+#geslachtSection .containerGeslacht form div label:first-of-type{
+    margin-bottom: 0.8em;
+}
 #geslachtSection .containerGeslacht form div label{
     color: white;
     font-family: 'Lato', sans-serif;
@@ -154,20 +168,27 @@ section {
     background-color:  #FF7800;
 }
 
+.radioButtonsGeslachtSection{
+    display:flex;
+    margin: auto;
+}
 
-#geslachtSection .containerGeslacht form div input[type="radio"] {
-    pointer-events: none;
+.radioButtonsGeslachtSection input[type="radio"] {
+    display: none;
     visibility: hidden;
-    opacity:0;
+    opacity: 0;
     margin-left: -1.3em;
 }
-#geslachtSection .containerGeslacht form div input[type="radio"] + label:active {
+.radioButtonsGeslachtSection input[type="radio"]+label:active {
     color: #FF7800;
     background-color: white;
     border: none;
 }
+.radioButtonsGeslachtSection input[type="radio"]:checked+label {
+    background-color: #FF7800;
+}
 
-.scroll-down-button{
+/* .scroll-down-button{
     height: 4.125em;
     width: 2.688em;
     border: 0.125em solid white;
@@ -208,7 +229,7 @@ section {
         opacity: 0;
         top: 90%;
     }
-}
+} */
 
 /* //continentenSection//////////////////////////////////////////////////////////////////////////////////////////// */
 
@@ -217,7 +238,7 @@ section {
     position: relative;
     justify-content: center;
 }
-.containerContinenten{
+#continentenSection .containerContinenten{
     margin-left: -8em;
 }
 
@@ -253,7 +274,7 @@ section {
     display: flex;
     list-style: none;
     justify-content: center;
-    width: 10em;
+    width: 10.3em;
 } 
 #continentenSection .containerContinenten form div:nth-child(3) label:hover{
     transform: scale(1.06);
@@ -295,25 +316,38 @@ section {
     color: white;
 }
 
-#continentenSection .containerContinenten form div input[type="radio"] {
-    pointer-events: none;
+
+.containerContinenten div input[type="radio"] { 
+    display: none;
     visibility: hidden;
-    opacity:0;
+    opacity: 0;
     margin-left: -1.3em;
 }
-#continentenSection .containerContinenten form div input[type="radio"]:hover + label {
-    transform: scale(1.06);
-}
-#continentenSection .containerContinenten form div input[type="radio"] + label:active {
+.radioButtonsContinentenSection input[type="radio"]+label:active {
     color: #FF7800;
     background-color: white;
     border: none;
 }
-#continentenSection .containerContinenten form div input[type="radio"] + label:checked {
-    border: #FF7800 0.3em solid;
+.radioButtonsContinentenSection input[type="radio"]:checked+label {
     background-color: #FF7800;
-    color: white;
-    transform: scale(1.06);
+}
+
+.radioButtons2ContinentenSection input[type="radio"]+label:active {
+    color: #FF7800;
+    background-color: white;
+    border: none;
+}
+.radioButtons2ContinentenSection input[type="radio"]:checked+label {
+    background-color: #FF7800;
+}
+
+#continentenSection .containerContinenten div:nth-child(3) input[type="radio"]+label:active {
+    color: #FF7800;
+    background-color: white;
+    border: none;
+}
+#continentenSection .containerContinenten div:nth-child(3) input[type="radio"]:checked+label {
+    background-color: #FF7800;
 }
 
 /* /////////////////////////////////////////////// */
