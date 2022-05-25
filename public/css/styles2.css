@@ -356,6 +356,10 @@ section {
     background-color: #007EFF;
 }
 
+.mijnTravelBuddiesMatchesBody #map{
+    height: 300px;
+    width: 80%;
+}
 .mijnTravelBuddiesMatchesBody main h1{
     display: flex;
     position: absolute;
