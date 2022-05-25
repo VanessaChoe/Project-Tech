@@ -5,6 +5,8 @@ document.getElementById("ButtonNavUitloggen").onclick = function () {
 	location.href = "/";
 };
 
+// https://www.youtube.com/watch?v=Zxf1mnP5zcw&t=744s
+
 function initMap(){
 	var options = {
 		zoom:8,
