@@ -42,40 +42,6 @@ section {
     text-align: center;
 }
 
-.homepageBody button{
-    display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color: red;
-  color: white;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 4px;
-}
-/* #myBtn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 99;
-    font-size: 18px;
-    border: none;
-    outline: none;
-    background-color: red;
-    color: white;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 4px;
-  }
-  
-  #myBtn:hover {
-    background-color: #555; */
-
 /* //keuzeSection//////////////////////////////////////////////////////////////////////////////// */
 
 #keuzeSection{
@@ -174,7 +140,7 @@ section {
 }
 
 .radioButtonsGeslachtSection input[type="radio"] {
-    display: none;
+    display: flex;
     visibility: hidden;
     opacity: 0;
     margin-left: -1.3em;
@@ -188,49 +154,6 @@ section {
     background-color: #FF7800;
 }
 
-/* .scroll-down-button{
-    height: 4.125em;
-    width: 2.688em;
-    border: 0.125em solid white;
-    position: absolute;
-    bottom: 3em;
-    border-radius: 3.125em;
-    cursor: pointer;
-    margin-left: 6.3em;
-}
-.scroll-down-button::before,
-.scroll-down-button::after{
-    content: '';
-    position: absolute;
-    top: 20%;
-    left:50%;
-    border: 2px solid white;
-    height: 10px;
-    width: 10px;
-    transform: translate(-50%, -50%) rotate(45deg);
-    border-top: transparent;
-    border-left: transparent;
-    animation: scroll-down-button 1s ease-in-out infinite;
-}
-.scroll-down-button::after{
-    top: 30%;
-}
-@keyframes scroll-down-button{
-    0%{
-        opacity: 0;
-    }
-    30%{
-        opacity: 1;
-    }
-    60%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-        top: 90%;
-    }
-} */
-
 /* //continentenSection//////////////////////////////////////////////////////////////////////////////////////////// */
 
 #continentenSection{
@@ -238,6 +161,25 @@ section {
     position: relative;
     justify-content: center;
 }
+#continentenSection button{
+    display: flex;
+    margin-top: 5em;
+    color: white;
+    background-color: #FF7800;
+    border: none;
+    border-radius: 0.4em;
+    width: 14em;
+    justify-content: center;
+    cursor: pointer;
+    padding: 1.9em 1.25em;
+    margin-left: 19.5em;
+}
+#continentenSection button:hover{
+    background-color:white;
+    color: #FF7800;
+    border: 0.12em solid #FF7800;
+}
+
 #continentenSection .containerContinenten{
     margin-left: -8em;
 }
@@ -318,7 +260,7 @@ section {
 
 
 .containerContinenten div input[type="radio"] { 
-    display: none;
+    display: flex;
     visibility: hidden;
     opacity: 0;
     margin-left: -1.3em;
@@ -350,14 +292,19 @@ section {
     background-color: #FF7800;
 }
 
-/* /////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .mijnTravelBuddiesMatchesBody{
     background-color: #007EFF;
 }
 
+.mijnTravelBuddiesMatchesBody main section .match{
+    display: flex;
+    justify-content: center;
+}
+
 .mijnTravelBuddiesMatchesBody #map{
-    height: 300px;
+    height: 18.75em;
     width: 80%;
 }
 .mijnTravelBuddiesMatchesBody main h1{
@@ -404,3 +351,80 @@ section {
     margin-top: 0.5em;
 } 
 
+
+
+
+
+
+/* //Popup https://sabe.io/tutorials/how-to-create-modal-popup-box///////////////////////////////////////////////////////////// */
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 11rem 5.2rem;
+    width: 32rem;
+    border-radius: 0.5rem;
+}
+
+.modal-content h1{
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-141px);    
+}
+.modal-content p{
+    justify-content: center;
+    display: flex;
+    align-items: center;    
+}
+    .modal-content button{
+    justify-content: center;
+    display: flex;
+    align-items: center;    
+}
+
+
+.close-button {
+    width: 6rem;
+    height: 2rem;
+    line-height: 1.5rem;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: #FF7800;
+    color: white;
+    border: none;
+    text-align: center;
+    margin-left: 9.3em;
+    transform: translateY(141px);
+}
+
+.close-button:hover {
+    background-color:white;
+    color: #FF7800;
+    border: 0.12em solid #FF7800;
+}
+
+.show-modal {
+    z-index: 100;
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */

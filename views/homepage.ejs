@@ -4,9 +4,10 @@
  <%- include('partials/head') %>
 
 <body class="homepageBody">
+
     <main>
         
-        <section id="keuzeSection">
+        <section class="keuzeSection" id="keuzeSection">
             <h1>TravelBuddy</h1>
             <h2>Maak hieronder je keuze.</h2>
         
@@ -14,16 +15,15 @@
                         <a href="#geslachtSection">Nieuwe TravelBuddy</a>
                         <a href="mijnTravelBuddiesMatches">Mijn TravelBuddy matches</a>
                     </div>
-
         </section>
 
-        <section id="geslachtSection">
+
+        <section class="geslachtSection" id="geslachtSection">
             <h1>TravelBuddy</h1>
             <h2>Kies het geslacht van je toekomstige TravelBuddy</h2>
-            <div class="containerGeslacht">
-        
-                <form action="/geslacht" method="POST">
 
+            <div class="containerGeslacht">
+                <form action="/geslacht" method="POST">
                     <div class="radioButtonsGeslachtSection" >
                         <input type="radio" name="Geslacht" id="vrouw" value="vrouw">    
                         <label id="labelVrouw" for="vrouw">Vrouw</label>
@@ -31,19 +31,15 @@
                         <input type="radio" name="Geslacht" id="man" value="man">    
                         <label id="labelMan" for="man">Man</label>
                     </div>
-    
                 </form>
-
-                <!-- <a class="scroll-down-button" href="#continentenSection"></a> -->
-
             </div>
         </section>
 
-        <section id="continentenSection">
+        <section class="continentenSection" id="continentenSection">
             <h1>TravelBuddy</h1>
             <h2>Naar welk continent wil je op reis gaan?</h2>
-            <div class="containerContinenten">
 
+            <div class="containerContinenten">
                 <form action="/continenten" method="POST">
 
                     <div class="radioButtonsContinentenSection">
@@ -73,19 +69,24 @@
                         <label id="labelZuid-Amerika" for="Zuid-Amerika">Zuid-Amerika</label>
                     </div>
 
-                    <div>
-                        <input type="radio" name="submitButton" id="submitButton" value="Submit">
-                        <label id="labelSubmitButton" for="submitButton">Maak TravelBuddy match</label>
-                    </div>
-
                 </form>
 
+                <button class="trigger">Match</button>
             </div>
         </section>
 
-        <!-- <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> -->
+        <!-- https://sabe.io/tutorials/how-to-create-modal-popup-box -->
+        <div class="modal">
+            <div class="modal-content">
+                <h1>Match gemaakt!</h1>
+                <p>jfhjfhbdcdnmcndmcn</p>
+                <button id="close-button" class="close-button">Terug</button>
+            </div>
+        </div>
+        
     </main>
 
     <script src="/index.js"></script>
+
 </body>
 </html>
