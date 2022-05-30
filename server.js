@@ -8,6 +8,7 @@ const path = require('path');
 const port = process.env.PORT || 3000;
 let db = null;
 
+app.use(bodyParser.urlencoded({ extended: true}));
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 
@@ -45,7 +46,27 @@ async function connectDB() {
   }
 }
 
+async function run() {
+  try {
+    await client.connect();
+
+    const database = client.db("Cluster0");
+    const movies = database.collection("travelbuddies")
+  }
+}
+
 // //////////////////////////////////////////////////////
+
+
+// match ////////////////////////////////////////////////
+
+const match = {
+  image: "images/meisje.png"
+  name: String,
+  geslacht: String,
+  continent: ""
+  land: ""
+}
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
