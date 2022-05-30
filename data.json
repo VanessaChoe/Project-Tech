@@ -1,14 +1,15 @@
-"image": "images/meisje.png"
-"name": "Eline"
-"geslacht": "Vrouw"
-"continent": ""
-"land": ""
-
-"image": "images/jongen.png"
-"name": "Cas"
-"geslacht": "Man"
-"continent": ""
-"land": "
-
-
+[{
+    "image": "images/meisje.png",
+    "name": "Eline",
+    "geslacht": "vrouw",
+    "continent": "Afrika",
+    "land": "Marokko"
+},
+{
+    "image": "images/jongen.png",
+    "name": "Cas",
+    "geslacht": "man",
+    "continent": "Europa",
+    "land": "Italië"   
+}]
 

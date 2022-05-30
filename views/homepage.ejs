@@ -23,7 +23,7 @@
             <h2>Kies het geslacht van je toekomstige TravelBuddy</h2>
 
             <div class="containerGeslacht">
-                <form action="/geslacht" method="POST">
+                <form action="/" method="POST">
                     <div class="radioButtonsGeslachtSection" >
                         <input type="radio" name="Geslacht" id="vrouw" value="vrouw">    
                         <label id="labelVrouw" for="vrouw">Vrouw</label>
@@ -31,7 +31,7 @@
                         <input type="radio" name="Geslacht" id="man" value="man">    
                         <label id="labelMan" for="man">Man</label>
                     </div>
-                </form>
+                <!-- </form> -->
             </div>
         </section>
 
@@ -40,7 +40,7 @@
             <h2>Naar welk continent wil je op reis gaan?</h2>
 
             <div class="containerContinenten">
-                <form action="/continenten" method="POST">
+                <!-- <form action="/continenten" method="POST"> -->
 
                     <div class="radioButtonsContinentenSection">
                         <input type="radio" name="continenten" id="Afrika" value="Afrika">    
@@ -68,10 +68,10 @@
                         <input type="radio" name="continenten" id="Zuid-Amerika" value="Zuid-Amerika">
                         <label id="labelZuid-Amerika" for="Zuid-Amerika">Zuid-Amerika</label>
                     </div>
-
+                    
+                    <button class="trigger">Match</button>
                 </form>
 
-                <button class="trigger">Match</button>
             </div>
         </section>
 
@@ -79,7 +79,7 @@
         <div class="modal">
             <div class="modal-content">
                 <h1>Match gemaakt!</h1>
-                <p>jfhjfhbdcdnmcndmcn</p>
+                <%- include('partials/profile'); %>
                 <button id="close-button" class="close-button">Terug</button>
             </div>
         </div>

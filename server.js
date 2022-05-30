@@ -8,29 +8,29 @@ const path = require('path');
 const port = process.env.PORT || 3000;
 let db = null;
 
-app.use(bodyParser.urlencoded({ extended: true}));
+// app.use(bodyParser.urlencoded({ extended: true}));
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 
-app.use(function (req, res){
-  console.error("Error 404:page not found");
-  res.status(404).render('404', {title: "Error 404: page not found"});
-});
+
+
 app.get('/', (req, res) => {
   res.render('homepage')
-})
+});
+
 app.get('/mijnTravelBuddiesMatches', (req, res) => {
   res.render('mijnTravelBuddiesMatches')
 });
+
 app.post ("/geslacht", (req, res) => {
   res.send("geslacht")
-})
+});
 
 
 
 
 // //MongoDB/////////////////////////////////////////////////////////////////////////
-const { MongoClient, ServerApiVersion } = require('mongodb');
+const { MongoClient } = require('mongodb');
 
 async function connectDB() {
   const uri = process.env.DB_URI;
@@ -44,29 +44,29 @@ async function connectDB() {
   } catch (error) {
     throw error;
   }
-}
+};
 
-async function run() {
-  try {
-    await client.connect();
+// async function run() {
+//   try {
+//     await client.connect();
 
-    const database = client.db("Cluster0");
-    const movies = database.collection("travelbuddies")
-  }
-}
+//     const database = client.db("Cluster0");
+//     // const movies = database.collection("travelbuddies");
+//   }
+// };
 
 // //////////////////////////////////////////////////////
 
 
 // match ////////////////////////////////////////////////
 
-const match = {
-  image: "images/meisje.png"
-  name: String,
-  geslacht: String,
-  continent: ""
-  land: ""
-}
+// const match = {
+//   image: "images/meisje.png"
+//   name: String,
+//   geslacht: String,
+//   continent: ""
+//   land: ""
+// }
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
@@ -74,26 +74,25 @@ app.listen(port, () => {
   connectDB().then(console.log("connectie"));
 })
 
-// const matchItems = [{}];
+ app.post('/', async (req, res) => {
+ 
+  const travelbuddies = await db.collection('travelbuddies').find({}, {}).toArray()
 
-// app.post('/', (req, res) => {
-//   matchItems.push({
-//     gender: req.body.gender,
-//     age: req.body.age,
-//     size: req.body.size,
-//   });
+   const profiles = travelbuddies.filter((match) => {
+     //checking if filters are correct
+     const continent = req.body.continent.includes(match.continent);
+     const geslacht = req.body.geslacht.includes(match.geslacht);
 
-//   const userMatches = matches.filter((match) => {
-//     //checking if filters are correct
-//     const ageMatches = req.body.age.includes(match.age);
-//     const sizeMatches = req.body.size.includes(match.size);
-//     const genderMatches = req.body.gender.includes(match.gender);
+     console.log( continent, geslacht);
+     if (continent && geslacht) {
+       return match;
+     }
+   });
 
-//     console.log(ageMatches, sizeMatches, genderMatches);
-//     if (ageMatches && sizeMatches && genderMatches) {
-//       return match;
-//     }
-//   });
+   res.render('pages/homepage', {travelbuddies:travelbuddies});
+ });
 
-//   res.render('pages/match', { matches: userMatches });
-// });
+app.use(function (req, res){
+  console.error("Error 404:page not found");
+  res.status(404).render('404', {title: "Error 404: page not found"});
+});
