@@ -48,13 +48,13 @@ async function connectDB() {
  res.render('mijnTravelBuddiesMatches', {travelbuddies:travelbuddies});
  });
 
- app.listen(port, () => {
+app.use(function (req, res){
+  console.error("Error 404:page not found");
+  res.status(404).render('404', {title: "Error 404: page not found"});
+});  
+
+app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 
   connectDB().then(console.log("Connectie MongoDB"));
 })
-
-app.use(function (req, res){
-  console.error("Error 404:page not found");
-  res.status(404).render('404', {title: "Error 404: page not found"});
-});      
