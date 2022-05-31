@@ -40,12 +40,6 @@ async function connectDB() {
 
 // Data uit MongoDB//////////////////////////////////////////////////////////////////////////
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-
-  connectDB().then(console.log("Connectie MongoDB"));
-})
-
  app.post('/', async (req, res) => {
 
  const query = {}; // Alle data uit collection
@@ -53,6 +47,12 @@ app.listen(port, () => {
   
  res.render('mijnTravelBuddiesMatches', {travelbuddies:travelbuddies});
  });
+
+ app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+
+  connectDB().then(console.log("Connectie MongoDB"));
+})
 
 app.use(function (req, res){
   console.error("Error 404:page not found");
