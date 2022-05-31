@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
+
+/* https://www.youtube.com/watch?v=LY1jeQGUiAI */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body{
+    background-color: #007EFF;
+}
+
+form section:first-of-type{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+form section:first-of-type h1{
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 3em; 
+    color: #FF7800;
+}
+form section:first-of-type h2{
+    margin-top: em;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 1.2em;
+    color: white;
+    justify-content: center;
+    text-align: center;
+} 
+
+
+
+.geslacht{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: row;
+    margin-bottom: 1em;
+    margin-top: -3em;
+}
+.geslacht h1{
+    display: flex;
+    position: absolute;
+    margin-top: 10em;
+    margin-bottom: 15em;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 1.2em;
+    color: white;
+    justify-content: center;
+    text-align: center;
+}
+.geslacht div{
+    margin-top: 20em;
+    display: grid;
+    list-style: none;
+}
+.geslacht div label{
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;   
+    border: 0.1em solid white;
+    padding: 1.5em 1.25em;
+    margin: 0;
+    border-radius: 0.4em;
+    cursor: pointer;
+    width: 15em;
+    text-align: center;
+    font-size: 0.9em;    
+}
+.geslacht div label:hover{
+    transform: scale(1.06);
+    color: white;
+    background-color:  #FF7800;
+}
+
+.geslacht div input[type="radio"] {
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    margin-left: -1.3em;
+}
+.geslacht div input[type="radio"]+label:active {
+    color: #FF7800;
+    background-color: white;
+    border: none;
+}
+.geslacht div input[type="radio"]:checked+label {
+    background-color: #FF7800;
+}
+
+
+
+
+.continenten{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: row;
+}
+.continenten h1{
+    display: flex;
+    position: absolute;
+    margin-top: 10em;
+    margin-bottom: 15em;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 1.2em;
+    color: white;
+    justify-content: center;
+    text-align: center;
+}
+.continenten div{
+    margin-top: 20em;
+    display: grid;
+    list-style: none;
+}
+.continenten div label{
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;   
+    border: 0.1em solid white;
+    padding: 1.5em 1.25em;
+    margin: 0;
+    border-radius: 0.4em;
+    cursor: pointer;
+    width: 15em;
+    text-align: center;
+    font-size: 0.9em;    
+}
+.continenten div label:hover{
+    transform: scale(1.06);
+    color: white;
+    background-color:  #FF7800;
+}
+
+.continenten div input[type="radio"] {
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    margin-left: -1.3em;
+}
+.continenten div input[type="radio"]+label:active {
+    color: #FF7800;
+    background-color: white;
+    border: none;
+}
+.continenten div input[type="radio"]:checked+label {
+    background-color: #FF7800;
+}
+
+.trigger{
+    color: white;
+    background-color: #FF7800;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;   
+    border: 0.1em solid white;
+    padding: 1.5em 1.25em;
+    margin: 0;
+    border-radius: 0.4em;
+    cursor: pointer;
+    width: 15em;
+    text-align: center;
+    font-size: 0.9em; 
+    margin-top: 3em;
+}

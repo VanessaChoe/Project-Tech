@@ -16,10 +16,15 @@ app.set("view engine", "ejs");
 
 app.get('/', (req, res) => {
   res.render('homepage')
+  console.log("het werkt")
 });
 
 app.get('/mijnTravelBuddiesMatches', (req, res) => {
   res.render('mijnTravelBuddiesMatches')
+});
+
+app.get('/match', (req, res) => {
+  res.render('match')
 });
 
 app.post ("/geslacht", (req, res) => {
@@ -68,28 +73,59 @@ async function connectDB() {
 //   land: ""
 // }
 
+// app.listen(port, () => {
+//   console.log(`Example app listening on port ${port}`)
+
+//   connectDB().then(console.log("Connectie MongoDB"));
+// })
+
+//  app.post('/', async (req, res) => {
+ 
+//   const travelbuddies = await db.collection('travelbuddies').find({}, {}).toArray()
+
+//    const profiles = travelbuddies.filter((match) => {
+//      //checking if filters are correct
+//      const continent = req.body.continent.includes(match.continent);
+//      const geslacht = req.body.geslacht.includes(match.geslacht);
+
+//      console.log( continent, geslacht);
+//      if (continent && geslacht) {
+//        return match;
+//      }
+//    });
+
+//    res.render('pages/homepage', {travelbuddies:travelbuddies});
+//  });
+
+
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 
-  connectDB().then(console.log("connectie"));
+  connectDB().then(console.log("Connectie MongoDB"));
 })
 
- app.post('/', async (req, res) => {
- 
-  const travelbuddies = await db.collection('travelbuddies').find({}, {}).toArray()
+app.post('/', async (req, res) => {
 
-   const profiles = travelbuddies.filter((match) => {
-     //checking if filters are correct
-     const continent = req.body.continent.includes(match.continent);
-     const geslacht = req.body.geslacht.includes(match.geslacht);
+  // const queryGeslacht = { geslacht: { $in: arrayify(req.geslacht) } };
+  // const queryContinent = { continent: { $in: arrayify(req.continent) } };
+  // const queryMatch = { ...queryGeslacht, ...queryContinent }; 
 
-     console.log( continent, geslacht);
-     if (continent && geslacht) {
-       return match;
-     }
-   });
+const query = {...queryGeslacht, ...queryContinent};
+const queryGeslacht = {geslacht: 'man'};
+ const queryContinent = {continent: 'Afrika'}; //, continent: 'Amerika', continent: 'Azië' , continent:'Europa', continent:'Antartica', continent:'Noord-Amerika'};
 
-   res.render('pages/homepage', {travelbuddies:travelbuddies});
+const match = await db.collection('travelbuddies').find(query, {}).toArray();
+// const continent = await db.collection('travelbuddies').find(queryContinent, {}).toArray();
+// const travelbuddies = await db.collection('travelbuddies').find(query, {}).toArray();
+
+res.render('mijnTravelBuddiesMatches', {travelbuddies:match});
+// res.render('mijnTravelBuddiesMatches', {travelbuddies:travelbuddies});
+// res.render('mijnTravelBuddiesMatches', {travelbuddies:continent});
+
+//  const travelbuddies = await db.collection('travelbuddies').find(query, {}).toArray();
+  
+  // res.render('mijnTravelBuddiesMatches', {travelbuddies:travelbuddies});
  });
 
 app.use(function (req, res){

@@ -15,6 +15,12 @@
         <div class="match"></div>
         <div id="map"></div>
     </section>
+
+    <section>
+        <% travelbuddies.forEach(function(travelbuddy){ %>
+            <%- include('partials/profile', {travelbuddy: travelbuddy}); %>
+          <% }); %>
+    </section>
     
     <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAththjafmqpXeRzHrX6M_naaQVtXLuR20&callback=initMap">

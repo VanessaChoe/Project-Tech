@@ -12,14 +12,22 @@ terugButton.addEventListener('click', scrollToFirstSection);
 function scrollToSection() {
 	console.log(window.location.href)
 
-	window.location.hash     = 'continentenSection';
+	window.location.hash     = 'continenten';
 }
 
 function scrollToFirstSection() {
 	console.log(window.location.href)
 
-	window.location.hash     = 'keuzeSection';
+	window.location.hash     = 'continenten';
 }
+
+// const continentenButtons = document.getElementById('continenten');
+// continentenButtons.forEach(naarMatchButton);
+
+// function naarMatchButton() {
+
+// 	window.location.hash     = 'trigger';
+// }
 
 /* //Popup https://sabe.io/tutorials/how-to-create-modal-popup-box/////////////////////////////////////////// */
 
