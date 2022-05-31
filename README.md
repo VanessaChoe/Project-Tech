@@ -1,4 +1,4 @@
-<img src="../images/coverTravelBuddy.png" width="375px" alt="Cover">
+<img src="/images/coverTravelBuddy.png" width="375px" alt="Cover">
 
 # TravelBuddy
 
