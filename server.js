@@ -108,10 +108,10 @@ app.listen(port, () => {
  const query = {};
  const travelbuddies = await db.collection('travelbuddies').find(query, {}).toArray();
   
-  res.render('mijnTravelBuddiesMatches', {travelbuddies:travelbuddies});
+ res.render('mijnTravelBuddiesMatches', {travelbuddies:travelbuddies});
  });
 
 app.use(function (req, res){
   console.error("Error 404:page not found");
   res.status(404).render('404', {title: "Error 404: page not found"});
-});
+});      
