@@ -97,35 +97,18 @@ async function connectDB() {
 //    res.render('pages/homepage', {travelbuddies:travelbuddies});
 //  });
 
-
-
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 
   connectDB().then(console.log("Connectie MongoDB"));
 })
 
-app.post('/', async (req, res) => {
+ app.post('/', async (req, res) => {
 
-  // const queryGeslacht = { geslacht: { $in: arrayify(req.geslacht) } };
-  // const queryContinent = { continent: { $in: arrayify(req.continent) } };
-  // const queryMatch = { ...queryGeslacht, ...queryContinent }; 
-
-const query = {...queryGeslacht, ...queryContinent};
-const queryGeslacht = {geslacht: 'man'};
- const queryContinent = {continent: 'Afrika'}; //, continent: 'Amerika', continent: 'Azië' , continent:'Europa', continent:'Antartica', continent:'Noord-Amerika'};
-
-const match = await db.collection('travelbuddies').find(query, {}).toArray();
-// const continent = await db.collection('travelbuddies').find(queryContinent, {}).toArray();
-// const travelbuddies = await db.collection('travelbuddies').find(query, {}).toArray();
-
-res.render('mijnTravelBuddiesMatches', {travelbuddies:match});
-// res.render('mijnTravelBuddiesMatches', {travelbuddies:travelbuddies});
-// res.render('mijnTravelBuddiesMatches', {travelbuddies:continent});
-
-//  const travelbuddies = await db.collection('travelbuddies').find(query, {}).toArray();
+ const query = {};
+ const travelbuddies = await db.collection('travelbuddies').find(query, {}).toArray();
   
-  // res.render('mijnTravelBuddiesMatches', {travelbuddies:travelbuddies});
+  res.render('mijnTravelBuddiesMatches', {travelbuddies:travelbuddies});
  });
 
 app.use(function (req, res){
