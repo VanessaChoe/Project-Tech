@@ -24,10 +24,12 @@ Of ga naar <a href="https://travelbuddyapp-pt.herokuapp.com/">https://travelbudd
 
 Heb je nog vragen of ben je benieuwd naar mijn werk? Neem gerust contact op!
 
-Naam: Vanessa Choe
-E-mail: vanessa.choe.12@gmail.com
-Linked-In: www.linkedin.com/in/vanessa-choe-97783820b
-Portfolio: <a href="https://vanessachoe12.wixsite.com/portfolio">https://vanessachoe12.wixsite.com/portfolio</a>
+<ul>
+    <li>Naam: Vanessa Choe</li>
+    <li>E-mail: vanessa.choe.12@gmail.com</li>
+    <li>Linked-In: www.linkedin.com/in/vanessa-choe-97783820b</li>
+    <li>Portfolio: <a href="https://vanessachoe12.wixsite.com/portfolio">https://vanessachoe12.wixsite.com/portfolio</a></li>
+</ul>
 
 # License
 
