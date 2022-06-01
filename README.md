@@ -1,3 +1,4 @@
+<img src="images/coverTravelbuddy.png" alt="coverTravelbuddy" width="500" height="600">
 
 # TravelBuddy
 
