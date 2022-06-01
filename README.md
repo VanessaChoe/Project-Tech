@@ -1,4 +1,4 @@
-<img src="images/coverTravelbuddy.png" width="375px" alt="coverTravelbuddy">
+<img width="100px" alt="kleurenthema" src="file:///Users/vanessachoe/Desktop/Project-Tech/public/images/coverTravelbuddy.png">
 
 # TravelBuddy
 
