@@ -1,4 +1,4 @@
-<img src="/images/coverTravelBuddy.png" width="375px" alt="Cover">
+<img src="images/coverTravelbuddy.png" width="375px" alt="coverTravelbuddy">
 
 # TravelBuddy
 
@@ -11,6 +11,8 @@ Travelbuddy is een app om een reis buddy te zoeken om samen te reizen naar een w
 # Gebruik
 
 Ga naar https://travelbuddyapp-pt.herokuapp.com/ om TravelBuddy te gebruiken!
+
+Benieuwd naar mijn documentatie? Neem een kijkje door mijn <a href="https://github.com/VanessaChoe/Project-Tech/wiki">wiki</a>!
 
 # Contact
 
