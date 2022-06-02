@@ -1,6 +1,6 @@
 # TravelBuddy
 
-<img href="public/images/user.png" alt="TravelBuddy Cover">
+<img href="images/user.png" alt="TravelBuddy Cover">
 
 Voor een project voor school heb ik een feature moeten maken voor een matching applicatie. Voor dit project heb ik 1 filter functie uitgewerkt door middel van frontend en backend. TravelBuddy is dus geen complete matching applicatie.
 
