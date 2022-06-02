@@ -44,6 +44,7 @@ async function connectDB() {
  app.post('/', async (req, res) => {
 
  const query = {}; // Alle data uit collection
+ const QueryVrouw = {geslacht: 'vrouw'};
  const travelbuddies = await db.collection('travelbuddies').find(query, {}).toArray();
   
  res.render('mijnTravelBuddiesMatches', {travelbuddies:travelbuddies});
