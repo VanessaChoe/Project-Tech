@@ -13,7 +13,7 @@ Benieuwd naar mijn documentatie? Neem een kijkje door mijn
 
 # Installatie
 
-Wil je mijn project clonen? Volg dan de onderstaande stappen:
+Wil je mijn project clonen? Volg dan de onderstaande stappen in je terminal:
 
 <ol> 
     <li>git clone https://github.com/VanessaChoe/Project-Tech.wiki.git</li>
