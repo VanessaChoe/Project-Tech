@@ -12,7 +12,7 @@ html {
 }
 
 body{
-    background-color: #007EFF;
+    background-color: #E8E8E8;
 }
 
 form section:first-of-type{
@@ -25,14 +25,13 @@ form section:first-of-type h1{
     font-family: 'Lato', sans-serif;
     font-weight: 700;
     font-size: 3em; 
-    color: #FF7800;
+    color: #3481F3;
 }
 form section:first-of-type h2{
-    margin-top: em;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 1.2em;
-    color: white;
+    color: black;
     justify-content: center;
     text-align: center;
 } 
@@ -55,7 +54,7 @@ form section:first-of-type h2{
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 1.2em;
-    color: white;
+    color: black;
     justify-content: center;
     text-align: center;
 }
@@ -65,7 +64,7 @@ form section:first-of-type h2{
     list-style: none;
 }
 .geslacht div label{
-    color: white;
+    color: black;
     font-family: 'Lato', sans-serif;
     font-weight: 400;   
     border: 0.1em solid white;
@@ -75,12 +74,14 @@ form section:first-of-type h2{
     cursor: pointer;
     width: 15em;
     text-align: center;
-    font-size: 0.9em;    
+    font-size: 0.9em; 
+    background-color: white;   
 }
 .geslacht div label:hover{
     transform: scale(1.06);
     color: white;
-    background-color:  #FF7800;
+    background-color:  #3481F3;
+    border: 0.1em solid #3481F3;
 }
 
 .geslacht div input[type="radio"] {
@@ -90,12 +91,13 @@ form section:first-of-type h2{
     margin-left: -1.3em;
 }
 .geslacht div input[type="radio"]+label:active {
-    color: #FF7800;
+    color: #3481F3;
     background-color: white;
     border: none;
 }
 .geslacht div input[type="radio"]:checked+label {
-    background-color: #FF7800;
+    background-color: #3481F3;
+    color: white;
 }
 
 
@@ -119,48 +121,16 @@ form section:first-of-type h2{
     justify-content: center;
     text-align: center;
 }
+.continenten h1{
+    color: black;
+}
 .continenten div{
     margin-top: 20em;
     display: grid;
     list-style: none;
 }
 .continenten div label{
-    color: white;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;   
-    border: 0.1em solid white;
-    padding: 1.5em 1.25em;
-    margin: 0;
-    border-radius: 0.4em;
-    cursor: pointer;
-    width: 15em;
-    text-align: center;
-    font-size: 0.9em;    
-}
-.continenten div label:hover{
-    transform: scale(1.06);
-    color: white;
-    background-color:  #FF7800;
-}
-
-.continenten div input[type="radio"] {
-    display: flex;
-    visibility: hidden;
-    opacity: 0;
-    margin-left: -1.3em;
-}
-.continenten div input[type="radio"]+label:active {
-    color: #FF7800;
-    background-color: white;
-    border: none;
-}
-.continenten div input[type="radio"]:checked+label {
-    background-color: #FF7800;
-}
-
-.trigger{
-    color: white;
-    background-color: #FF7800;
+    color: black;
     font-family: 'Lato', sans-serif;
     font-weight: 400;   
     border: 0.1em solid white;
@@ -171,5 +141,132 @@ form section:first-of-type h2{
     width: 15em;
     text-align: center;
     font-size: 0.9em; 
+    background-color: white;    
+}
+.continenten div label:hover{
+    transform: scale(1.06);
+    color: white;
+    background-color:  #3481F3;
+    border: 0.1em solid #3481F3;
+}
+
+.continenten div input[type="radio"] {
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    margin-left: -1.3em;
+}
+.continenten div input[type="radio"]+label:active {
+    color: #3481F3;
+    background-color: white;
+    border: none;
+    border: 0.1em solid #3481F3;
+}
+.continenten div input[type="radio"]:checked+label {
+    background-color: #3481F3;
+    color: white;
+}
+
+.trigger{
+    color: white;
+    background-color: #3481F3;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;   
+    border: 0.1em solid #3481F3;
+    padding: 1.5em 1.25em;
+    margin: 0;
+    border-radius: 0.4em;
+    cursor: pointer;
+    width: 15em;
+    text-align: center;
+    font-size: 0.9em; 
     margin-top: 3em;
+}
+.continenten button:hover{
+    transform: scale(1.06);
+}
+
+
+
+
+.mijnTravelBuddiesMatchesBody header{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.mijnTravelBuddiesMatchesBody header nav {
+    position: absolute;
+    margin-top: 1.5em;
+}
+.mijnTravelBuddiesMatchesBody header nav button{
+    background-color: #3481F3;
+    border-radius: 50%;
+    border: solid #3481F3;
+    width: 4.5em;
+}
+.mijnTravelBuddiesMatchesBody header nav button:first-of-type{
+    height: 4.5em;
+    margin-right: 32em;
+}
+.mijnTravelBuddiesMatchesBody header nav button:nth-child(2){
+    height: 4.5em;
+    margin-top: -0.5em;
+}
+#ButtonTerug img{
+    width: 2.25em;
+}
+#ButtonFavorieten img{
+    width: 2.25em;
+    justify-content: center;
+    margin-top: 0.55em;
+}
+
+.mijnTravelBuddiesMatchesBody section:first-of-type{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.mijnTravelBuddiesMatchesBody section:first-of-type h1{
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 3em; 
+    color: #3481F3;
+}
+.mijnTravelBuddiesMatchesBody section:first-of-type h2{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 1.2em;
+    color: black;
+    justify-content: center;
+    text-align: center;
+}
+
+.mijnTravelBuddiesMatchesBody div{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 3em;
+}
+.mijnTravelBuddiesMatchesBody div button{
+    color: white;
+    background-color: #3481F3;
+    width: 9rem;
+    height: 2rem;
+    border-radius: 0.4em;
+    border: #3481F3;
+    margin-top: -4.7em;
+    margin-left: 11em;
+}
+.mijnTravelBuddiesMatchesBody div section{
+    background-color: white;
+    border-radius: 0.6em;
+    margin: 1em;
+    height: 12rem;
+    width: 20rem;
+}
+.mijnTravelBuddiesMatchesBody div section p{
+    margin-left: 5.3em;
 }

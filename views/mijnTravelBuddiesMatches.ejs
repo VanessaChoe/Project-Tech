@@ -9,19 +9,21 @@
 
     <main>
     
-        <!-- <a href="https://www.flaticon.com/free-icons/heart" title="heart icons">Heart icons created by Pixel perfect - Flaticon</a> -->
-        <!-- <a href="https://www.flaticon.com/free-icons/heart" title="heart icons">Heart icons created by Pixel perfect - Flaticon</a> -->
     <section>
-        <h1>Mijn TravelBuddies</h1>
-        <h2>Bekijk hieronder jouw Travelbuddies matches!</h2> 
-        <div class="match"></div>
-        <div id="map"></div>
+        <h1>TravelBuddy</h1>
+        <h2>Zie hieronder jouw TravelBuddy matches</h2>
     </section>
 
-    <section>
-        <% travelbuddies.forEach(function(travelbuddy){ %>
-            <%- include('partials/profile', {travelbuddy: travelbuddy}); %>
-          <% }); %>
+        <!-- <a href="https://www.flaticon.com/free-icons/heart" title="heart icons">Heart icons created by Pixel perfect - Flaticon</a> -->
+    <div>  <!-- <a href="https://www.flaticon.com/free-icons/heart" title="heart icons">Heart icons created by Pixel perfect - Flaticon</a> -->
+    <% travelbuddies.forEach(function(travelbuddy){ %>
+    <%- include('partials/profile', {travelbuddy: travelbuddy}); %>
+    <button>chat</button>
+    <% }); %>
+    </div>
+
+    <section> 
+        <div id="map"></div>
     </section>
     
     <script async defer
