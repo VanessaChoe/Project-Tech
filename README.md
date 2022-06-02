@@ -1,6 +1,6 @@
 # TravelBuddy
 
-<img src="images/user.png" alt="r" width="500" height="600">
+<img src="https://user-images.githubusercontent.com/90140769/171697611-f2f13cb3-bc7c-4ddc-9ecd-4a4991437fa5.png">
 
 Voor een project voor school heb ik een feature moeten maken voor een matching applicatie. Voor dit project heb ik 1 filter functie uitgewerkt door middel van frontend en backend. TravelBuddy is dus geen complete matching applicatie.
 
