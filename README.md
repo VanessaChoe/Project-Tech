@@ -9,7 +9,7 @@ Travelbuddy is een app om een reis buddy te zoeken om samen te reizen naar een w
 Benieuwd naar mijn documentatie? Neem een kijkje door mijn 
 <a href="https://github.com/VanessaChoe/Project-Tech/wiki">wiki</a>!
 
-# Git clone
+# Installatie
 
 Wil je mijn project clonen? Voer dan de onderstaande regel in je terminal.
 
