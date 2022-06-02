@@ -1,6 +1,6 @@
 # TravelBuddy
 
-<img href="Schermafbeelding 2022-06-02 om 19.46.40" alt="TravelBuddy Cover">
+<img src="images/user.png" alt="TravelBuddy cover" width="500" height="600">
 
 Voor een project voor school heb ik een feature moeten maken voor een matching applicatie. Voor dit project heb ik 1 filter functie uitgewerkt door middel van frontend en backend. TravelBuddy is dus geen complete matching applicatie.
 
