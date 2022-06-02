@@ -13,12 +13,14 @@ Benieuwd naar mijn documentatie? Neem een kijkje door mijn
 
 # Installatie
 
-Wil je mijn project clonen? Voer dan de onderstaande regel in je terminal.
+Wil je mijn project clonen? Volg dan de onderstaande stappen:
 
-<p>$ git clone https://github.com/VanessaChoe/Project-Tech.wiki.git <p>
-
-Download vervolgens nog de volgende packages: NPM en Nodemon.
-Ga vervolgens naar localhost:3000 in je browser
+<ol> 
+    <li>git clone https://github.com/VanessaChoe/Project-Tech.wiki.git</li>
+    <li>npm install</li>
+    <li>nodemon index.js</li>
+    <li>Voer localhost:3000 in je browser</li>
+</ol>
 
 Of ga naar <a href="https://travelbuddyapp-pt.herokuapp.com/">https://travelbuddyapp-pt.herokuapp.com/</a> om TravelBuddy direct te gebruiken!
 
