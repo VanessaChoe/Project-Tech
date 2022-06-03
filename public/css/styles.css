@@ -83,6 +83,14 @@ form section:first-of-type h2{
     background-color:  #3481F3;
     border: 0.1em solid #3481F3;
 }
+.geslacht div label a{
+    color: black;
+    text-decoration: none;
+}
+.geslacht div label a:hover{
+    color: white;
+    text-decoration: none;
+}
 
 .geslacht div input[type="radio"] {
     display: flex;
@@ -206,7 +214,7 @@ form section:first-of-type h2{
 }
 .mijnTravelBuddiesMatchesBody header nav button:first-of-type{
     height: 4.5em;
-    margin-right: 32em;
+    margin-right: 63em;
 }
 .mijnTravelBuddiesMatchesBody header nav button:nth-child(2){
     height: 4.5em;
@@ -269,4 +277,8 @@ form section:first-of-type h2{
 }
 .mijnTravelBuddiesMatchesBody div section p{
     margin-left: 5.3em;
+}
+
+.verstop {
+    display: none;
 }
