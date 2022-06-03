@@ -13,7 +13,7 @@ terugButton.addEventListener('click', scrollToFirstSection);
 function scrollToSection() {
 	console.log(window.location.href)
 	// window.location.hash = 'continenten';
-	// sectionOne.classList.add('verstop');
+	sectionOne.classList.add('verstop');
 }
 
 function scrollToFirstSection() {

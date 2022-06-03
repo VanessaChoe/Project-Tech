@@ -116,6 +116,7 @@ form section:first-of-type h2{
     justify-content: center;
     text-align: center;
     flex-wrap: row;
+    margin-top: -3em;
 }
 .continenten h1{
     display: flex;
@@ -250,7 +251,7 @@ form section:first-of-type h2{
     text-align: center;
 }
 
-.mijnTravelBuddiesMatchesBody div{
+.mijnTravelBuddiesMatchesBody main div{
     display: grid;
     justify-content: center;
     text-align: center;
@@ -258,7 +259,7 @@ form section:first-of-type h2{
     margin: auto;
     margin-top: 3em;
 }
-.mijnTravelBuddiesMatchesBody div button{
+.mijnTravelBuddiesMatchesBody main div button{
     color: white;
     background-color: #3481F3;
     width: 9rem;
@@ -268,15 +269,24 @@ form section:first-of-type h2{
     margin-top: -4.7em;
     margin-left: 11em;
 }
-.mijnTravelBuddiesMatchesBody div section{
+.mijnTravelBuddiesMatchesBody main div section{
     background-color: white;
     border-radius: 0.6em;
     margin: 1em;
     height: 12rem;
     width: 20rem;
 }
-.mijnTravelBuddiesMatchesBody div section p{
+.mijnTravelBuddiesMatchesBody main div section p{
     margin-left: 5.3em;
+}
+
+.mapSection{
+    margin-top: -1em;
+    margin-bottom: 6em;
+}
+#map{
+    height: 19em;
+    width: 70%;
 }
 
 .verstop {
