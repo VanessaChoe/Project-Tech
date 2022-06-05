@@ -41,28 +41,22 @@ async function connectDB() {
 
 // Data uit MongoDB//////////////////////////////////////////////////////////////////////////
 
-//  app.post('/', async (req, res) => {
+ app.post('/', async (req, res) => {
 
-//  const query = {}; // Alle data uit collection
-//  const QueryVrouw = {geslacht: 'vrouw'};
+ const query = {}; // Alle data uit collection
+ const QueryVrouw = {geslacht: { $in:(req.body.geslacht) } };
+ 
 
-//  const matches = await db.collection('travelbuddies').find(query, {}
-  //  geslacht: req.body.geslacht, 
-  //  continent: req.body.continenten, 
-//  );
-//  console.log(req.body.continenten);
+ const travelbuddies = await db.collection('travelbuddies').find({
+  // geslacht: 'Man', 
+  // continent: 'Afrika', 
+  }).toArray();
+  // geslacht: req.body.geslacht,
+  // continent: req.body.continenten.toArray()});
+ console.log(travelbuddies);
   
-//  res.render('mijnTravelBuddiesMatches', {matches});
-//  });
-
-app.post('/', async (req, res) => {
-
-  const query = {}; // Alle data uit collection
-  const QueryVrouw = {geslacht: 'vrouw'};
-  const travelbuddies = await db.collection('travelbuddies').find(query, {}).toArray();
-   
-  res.render('mijnTravelBuddiesMatches', {travelbuddies:travelbuddies});
-  });
+ res.render('mijnTravelBuddiesMatches', {travelbuddies});
+ });
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
@@ -70,7 +64,7 @@ app.listen(port, () => {
   connectDB().then(console.log("Connectie MongoDB"));
 })
 
-// app.use(function (req, res){
-//   console.error("Error 404:page not found");
-//   res.status(404).render('404', {title: "Error 404: page not found"});
-// }); 
+app.use(function (req, res){
+  console.error("Error 404:page not found");
+  res.status(404).render('404', {title: "Error 404: page not found"});
+}); 
