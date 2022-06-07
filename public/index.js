@@ -22,4 +22,10 @@ function scrollToFirstSection() {
 	window.location.hash = 'continenten';
 }
 
+async function WerkendeAPI() {
+	const response = await fetch (
+		"https://maps.googleapis.com/maps/api/js?key= <%= process.enc.API_KEY %> &callback=initMap"
+	)
+
+}
 // //////////////////////////////////////////////////////////////////////////////////////////////////////////////////

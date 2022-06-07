@@ -43,13 +43,17 @@ async function connectDB() {
 
  app.post('/', async (req, res) => {
 
- const query = {}; // Alle data uit collection
- const QueryVrouw = {geslacht: { $in:(req.body.geslacht) } };
- 
+ const query = {}; // Alle data uit collection 
 
- const travelbuddies = await db.collection('travelbuddies').find({
-  // geslacht: 'Man', 
-  // continent: 'Afrika', 
+ const travelbuddies = await db.collection('travelbuddies').find({ 
+   geslacht: "Vrouw", 
+   continent: "Afrika",
+  //  continent: "Azië",
+  //  continent: "Europa",
+  //  continent: "Antartica",
+  //  continent: "Noord-Amerika",
+  //  continent: "Oceanië"
+
   }).toArray();
   // geslacht: req.body.geslacht,
   // continent: req.body.continenten.toArray()});
