@@ -110,7 +110,6 @@ form section:first-of-type h2{
 
 
 
-
 .continenten{
     display:flex;
     justify-content: center;
@@ -162,7 +161,7 @@ form section:first-of-type h2{
 .continenten div input[type="radio"] {
     display: flex;
     visibility: hidden;
-    opacity: 0;
+    opacity: 0; 
     margin-left: -1.3em;
 }
 .continenten div input[type="radio"]+label:active {
@@ -275,6 +274,11 @@ form section:first-of-type h2{
     margin: 1em;
     height: 12rem;
     width: 20rem;
+}
+.mijnTravelBuddiesMatchesBody main div section img{
+    width: 7em;
+    position: absolute;
+    margin-left: 1.5em;
 }
 .mijnTravelBuddiesMatchesBody main div section p{
     margin-left: 5.3em;

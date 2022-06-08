@@ -5,6 +5,7 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 18440;
 
+app.use(express.urlencoded({ extended: true }));
 // Routes //////////////////////////////////////////////////////////////////////////////////////
 
 app.use(express.static("public"));
@@ -44,20 +45,22 @@ async function connectDB() {
  app.post('/', async (req, res) => {
 
  const query = {}; // Alle data uit collection 
+ console.log(req.body)
 
  const travelbuddies = await db.collection('travelbuddies').find({ 
-   geslacht: "Vrouw", 
-   continent: "Afrika",
+  // geslacht: "Vrouw", 
+  // continent: "Afrika"
   //  continent: "Azië",
   //  continent: "Europa",
   //  continent: "Antartica",
   //  continent: "Noord-Amerika",
   //  continent: "Oceanië"
 
-  }).toArray();
-  // geslacht: req.body.geslacht,
-  // continent: req.body.continenten.toArray()});
- console.log(travelbuddies);
+  geslacht: req.body.geslacht,
+  continent: req.body.continenten}).toArray();
+  
+  
+
   
  res.render('mijnTravelBuddiesMatches', {travelbuddies});
  });
@@ -70,5 +73,6 @@ app.listen(port, () => {
 
 app.use(function (req, res){
   console.error("Error 404:page not found");
-  res.status(404).render('404', {title: "Error 404: page not found"});
+  // res.status(404).render('404', {title: "Error 404: page not found"});
+  res.status(404).send('404');
 }); 
