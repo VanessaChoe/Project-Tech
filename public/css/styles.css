@@ -334,3 +334,7 @@ form section:first-of-type h2{
 .favorietenTravelBuddyMatchesBody{
     background-color: #3481F3;
 }
+
+.favorietenTravelBuddyMatchesBody h1{
+    color: black;
+}

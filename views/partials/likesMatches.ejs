@@ -1,8 +1,12 @@
 <section>
     <img src="/<%=travelbuddy.image%>" alt="TravelBuddy Profile Image">
 
-    <form>
-        <button><img src="images/roodHartje.png" alt=""></button>
+    <form action="/favorietenTravelBuddyMatches" method="post">
+
+        <button name="like" type="submit" value="<%= travelbuddy._id %>">
+            <img src="images/hartje.png" id="emptyHeart" alt="likeButton">
+        </button>
+
     </form>
     
     <ul>

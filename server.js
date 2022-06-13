@@ -15,18 +15,19 @@ app.set("view engine", "ejs");
   // Homepage ////////////////////////////////////////////
   app.get('/', (req, res) => {
     res.render('homepage')
-    console.log("het werkt")
+    console.log("homepage")
   });
 
   // mijnTravelBuddiesMatches ///////////////////////////
-  app.get('/mijnTravelBuddiesMatches', (req, res) => {
+  app.get('/mijnTravelBuddiesMatches.', (req, res) => {
     res.render('mijnTravelBuddiesMatches')
+    console.log("mijnTravelBuddiesMatches")
   });
 
   // favorietenTravelBuddyMatches //////////////////////////
-  app.get('/favorietenTravelBuddyMatches', (req, res) => {
-    console.log(favorietenTravelBuddyMatches);
+  app.get('/favorietenTravelBuddyMatches.', (req, res) => {
     res.render('favorietenTravelBuddyMatches')
+    console.log(favorietenTravelBuddyMatches)
   });
 
 // MongoDB Connectie///////////////////////////////////////////////////////////////////////////
@@ -50,7 +51,7 @@ async function connectDB() {
 // Data uit MongoDB////////////////////////////////////////////////////////////////////////////
 
 // TravelBuddy Matches ///////////////////////////////////////////////
-app.post('/', async (req, res) => {
+app.post('/mijnTravelBuddiesMatches', async (req, res) => {
 
 console.log(req.body)
 
@@ -62,7 +63,7 @@ res.render('mijnTravelBuddiesMatches', {travelbuddies});
 });
 
 // Like //////////////////////////////////////////////////////////////////
-app.post("/", async (req, res) => {
+app.post("/favorietenTravelBuddyMatches", async (req, res) => {
 
 const favorietenTravelBuddyMatches = await db.collection('travelbuddies').updateOne(
   {
@@ -73,7 +74,7 @@ const favorietenTravelBuddyMatches = await db.collection('travelbuddies').update
   }
 );
   
-res.redirect('favorietenTravelBuddyMatches', {favorietenTravelBuddyMatches});
+res.send('favorietenTravelBuddyMatches', {favorietenTravelBuddyMatches});
 });
 
 // Dislike ///////////////////////////////////////////////////////////////
@@ -108,7 +109,7 @@ app.listen(port, () => {
 
 // Error 404 Page ////////////////////////////////////////////////////////
 app.use(function (req, res){
-  console.error("Error 404:page not found");
-  // res.status(404).render('404', {title: "Error 404: page not found"});
-  res.status(404).send('404');
+   console.error("Error 404:page not found");
+   // res.status(404).render('404', {title: "Error 404: page not found"});
+   res.status(404).send('404');
 }); 
