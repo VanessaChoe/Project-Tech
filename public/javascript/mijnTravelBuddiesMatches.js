@@ -1,12 +1,23 @@
 console.log("mijnTravelBuddiesMatches.js");
 
 // // Location Web API //History Web API////////////////////////////////////////////////////////////////////////////////////////////
-document.getElementById("ButtonTerug").onclick = function () {
+document.document.querySelector("ButtonTerug").onclick = function () {
 	window.history.back();
 };
-document.getElementById("ButtonNavUitloggen").onclick = function () {
+document.document.querySelector("ButtonNavUitloggen").onclick = function () {
 	location.href = "/";
 };
+
+// // Like button //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function liken() {
+	var image = document.querySelector('emptyHeart');
+	if (image.src.match("images/roodHartje.png")) {
+		image.src = "images/hartje.png";
+	}
+	else {
+		image.src = "images/roodHartje.png";
+	}
+}
 
 // // Google Maps Javascript API////////////////////////////////////////////////////////////////////////////////////////////
 // https://www.youtube.com/watch?v=Zxf1mnP5zcw&t=744s

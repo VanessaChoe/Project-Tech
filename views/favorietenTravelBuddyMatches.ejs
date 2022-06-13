@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <%- include('partials/head') %>
+
+<body class="favorietenTravelBuddyMatchesBody">
+
+    <main>
+        <% travelbuddies.forEach(function(travelbuddy){ %>
+            
+            <%- include('partials/likesMatches', {travelbuddy: travelbuddy}); %>
+
+        <% }); %>
+    </main>
+    <script src="javascript/favorietenTravelBuddyMatches.js"></script>
+</body>
+</html>

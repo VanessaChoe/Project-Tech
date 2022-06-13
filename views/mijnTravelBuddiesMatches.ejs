@@ -11,15 +11,17 @@
     
     <section>
         <h1>TravelBuddy</h1>
-        <h2>Zie hieronder jouw TravelBuddy matches</h2>
+        <h2>Zie hieronder jouw TravelBuddy matches!</h2>
     </section>
 
-        <!-- <a href="https://www.flaticon.com/free-icons/heart" title="heart icons">Heart icons created by Pixel perfect - Flaticon</a> -->
+    <!-- <a href="https://www.flaticon.com/free-icons/heart" title="heart icons">Heart icons created by Pixel perfect - Flaticon</a> -->
     <div>  <!-- <a href="https://www.flaticon.com/free-icons/heart" title="heart icons">Heart icons created by Pixel perfect - Flaticon</a> -->
-    <% travelbuddies.forEach(function(travelbuddy){ %>
-    <%- include('partials/profile', {travelbuddy: travelbuddy}); %>
-    <button>chat</button>
-    <% }); %>
+        <% travelbuddies.forEach(function(travelbuddy){ %>
+            
+            <%- include('partials/profile', {travelbuddy: travelbuddy}); %>
+            <button>chat</button>
+
+        <% }); %>
     </div>
     
     <section class="mapSection"> 
@@ -32,6 +34,6 @@
 
     </main>
 
-    <script src="mijnTravelBuddiesMatches.js"></script>  
+    <script src="javascript/mijnTravelBuddiesMatches.js"></script>  
 </body>
 </html>

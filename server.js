@@ -6,6 +6,7 @@ const app = express();
 const port = process.env.PORT || 18440;
 
 app.use(express.urlencoded({ extended: true }));
+
 // Routes //////////////////////////////////////////////////////////////////////////////////////
 
 app.use(express.static("public"));
@@ -20,6 +21,12 @@ app.set("view engine", "ejs");
   // mijnTravelBuddiesMatches ///////////////////////////
   app.get('/mijnTravelBuddiesMatches', (req, res) => {
     res.render('mijnTravelBuddiesMatches')
+  });
+
+  // favorietenTravelBuddyMatches //////////////////////////
+  app.get('/favorietenTravelBuddyMatches', (req, res) => {
+    console.log(favorietenTravelBuddyMatches);
+    res.render('favorietenTravelBuddyMatches')
   });
 
 // MongoDB Connectie///////////////////////////////////////////////////////////////////////////
@@ -40,37 +47,66 @@ async function connectDB() {
   }
 };
 
-// Data uit MongoDB//////////////////////////////////////////////////////////////////////////
+// Data uit MongoDB////////////////////////////////////////////////////////////////////////////
 
- app.post('/', async (req, res) => {
+// TravelBuddy Matches ///////////////////////////////////////////////
+app.post('/', async (req, res) => {
 
- const query = {}; // Alle data uit collection 
- console.log(req.body)
+console.log(req.body)
 
- const travelbuddies = await db.collection('travelbuddies').find({ 
-  // geslacht: "Vrouw", 
-  // continent: "Afrika"
-  //  continent: "Azië",
-  //  continent: "Europa",
-  //  continent: "Antartica",
-  //  continent: "Noord-Amerika",
-  //  continent: "Oceanië"
-
+const travelbuddies = await db.collection('travelbuddies').find({ 
   geslacht: req.body.geslacht,
   continent: req.body.continenten}).toArray();
   
-  
+res.render('mijnTravelBuddiesMatches', {travelbuddies});
+});
 
-  
- res.render('mijnTravelBuddiesMatches', {travelbuddies});
- });
+// Like //////////////////////////////////////////////////////////////////
+app.post("/", async (req, res) => {
 
+const favorietenTravelBuddyMatches = await db.collection('travelbuddies').updateOne(
+  {
+  _id: ObjectId(req.body.like)
+  },
+  {
+  $set: {like: true,}, 
+  }
+);
+  
+res.redirect('favorietenTravelBuddyMatches', {favorietenTravelBuddyMatches});
+});
+
+// Dislike ///////////////////////////////////////////////////////////////
+// app.post("/removeFavoriteTravelBuddy", async (req, res) => {
+//   await db.collection('travelbuddies').updateOne(
+
+//     {
+//        _id:ObjectId(req.body.like),
+//      },
+//     {
+  //       $set: {like: true,}, 
+  //     }
+//     );
+
+//     await users.updateOne(
+//       { _id: ObjectId("62967307a4ff59e9678d2943") },
+//       { $push: { game_id: req.body.like } }
+//     );
+
+//     res.redirect("/");
+//   } catch (err) {
+//     console.log(err);
+//   }
+// });
+
+// Callback //////////////////////////////////////////////////////////////
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 
   connectDB().then(console.log("Connectie MongoDB"));
 })
 
+// Error 404 Page ////////////////////////////////////////////////////////
 app.use(function (req, res){
   console.error("Error 404:page not found");
   // res.status(404).render('404', {title: "Error 404: page not found"});

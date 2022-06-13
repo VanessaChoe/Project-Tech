@@ -79,9 +79,9 @@ form section:first-of-type h2{
 }
 .geslacht div label:hover{
     transform: scale(1.06);
-    color: white;
-    background-color:  #3481F3;
-    border: 0.1em solid #3481F3;
+    color: #3481F3;
+    background-color:  white;
+    border: 0.2em solid #3481F3;
 }
 .geslacht div label a{
     color: black;
@@ -153,9 +153,9 @@ form section:first-of-type h2{
 }
 .continenten div label:hover{
     transform: scale(1.06);
-    color: white;
-    background-color:  #3481F3;
-    border: 0.1em solid #3481F3;
+    color: #3481F3;
+    background-color:  white;
+    border: 0.2em solid #3481F3;
 }
 
 .continenten div input[type="radio"] {
@@ -195,16 +195,10 @@ form section:first-of-type h2{
 }
 
 
-
-
 .mijnTravelBuddiesMatchesBody header{
     display: flex;
     justify-content: center;
-    position: relative;
-}
-.mijnTravelBuddiesMatchesBody header nav {
-    position: absolute;
-    margin-top: 1.5em;
+    /* position: relative; */
 }
 .mijnTravelBuddiesMatchesBody header nav button{
     background-color: #3481F3;
@@ -229,19 +223,14 @@ form section:first-of-type h2{
     margin-top: 0.55em;
 }
 
-.mijnTravelBuddiesMatchesBody section:first-of-type{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-}
-.mijnTravelBuddiesMatchesBody section:first-of-type h1{
+.mijnTravelBuddiesMatchesBody main section:first-of-type h1{
     font-family: 'Lato', sans-serif;
     font-weight: 700;
+    text-align: center;
     font-size: 3em; 
     color: #3481F3;
 }
-.mijnTravelBuddiesMatchesBody section:first-of-type h2{
+.mijnTravelBuddiesMatchesBody main section:first-of-type h2{
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 1.2em;
@@ -253,7 +242,6 @@ form section:first-of-type h2{
 .mijnTravelBuddiesMatchesBody main div{
     display: grid;
     justify-content: center;
-    text-align: center;
     flex-direction: column;
     margin: auto;
     margin-top: 3em;
@@ -265,8 +253,8 @@ form section:first-of-type h2{
     height: 2rem;
     border-radius: 0.4em;
     border: #3481F3;
-    margin-top: -4.7em;
-    margin-left: 11em;
+    margin-top: -5.7em;
+    margin-left: 12.6em;
 }
 .mijnTravelBuddiesMatchesBody main div section{
     background-color: white;
@@ -275,14 +263,56 @@ form section:first-of-type h2{
     height: 12rem;
     width: 20rem;
 }
+.mijnTravelBuddiesMatchesBody main div section img:first-of-type{
+    margin-left: 1.5em;
+} 
 .mijnTravelBuddiesMatchesBody main div section img{
     width: 7em;
     position: absolute;
     margin-left: 1.5em;
+    margin-top: 2.5em;
 }
-.mijnTravelBuddiesMatchesBody main div section p{
-    margin-left: 5.3em;
+.mijnTravelBuddiesMatchesBody main div section form{
+    margin-left: 16em;
 }
+.mijnTravelBuddiesMatchesBody main div section form button{
+    margin-left: -5.5em;
+    color: transparent;
+    background-color: transparent;
+}
+.mijnTravelBuddiesMatchesBody main div section form button img{
+    width: 2.3em;
+    height: 2.3em;
+    margin-top: 0.25em;
+}
+.mijnTravelBuddiesMatchesBody main div section ul{
+    margin-top: 0.5em;
+}
+.mijnTravelBuddiesMatchesBody main div section ul li{
+    margin-left: 10.6em;
+    list-style: none;
+}
+
+.likeButton{
+    font-size:x-large;
+    background-color: transparent;
+    border: none; 
+  }
+  ion-icon.active{
+    fill:red;
+    stroke:none;
+  }
+  ion-icon{
+    fill:transparent;
+    stroke:black;
+    stroke-width:25;
+  }
+  
+  @-webkit-keyframes like {
+    0%   { transform: scale(1); }
+    90%   { transform: scale(1.2); }
+    100% { transform: scale(1.1); }
+  }
 
 .mapSection{
     margin-top: -1em;
@@ -293,6 +323,14 @@ form section:first-of-type h2{
     width: 70%;
 }
 
+/* added classes with css and JavaScript */
+/*/// section form index.ejs*/
 .verstop {
     display: none;
+}
+
+/* favorietenTravelBuddyMatchesBody //////////////////////////////////////////////////////////////////*/
+
+.favorietenTravelBuddyMatchesBody{
+    background-color: #3481F3;
 }

@@ -8,7 +8,7 @@ const terugButton = document.querySelector('#close-button');
 
 labelV.addEventListener('click', scrollToSection);
 labelM.addEventListener('click', scrollToSection);
-terugButton.addEventListener('click', scrollToFirstSection);
+// terugButton.addEventListener('click', scrollToFirstSection);
 
 function scrollToSection() {
 	console.log(window.location.href)
@@ -29,3 +29,4 @@ async function WerkendeAPI() {
 
 }
 // //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
