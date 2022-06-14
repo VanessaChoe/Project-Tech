@@ -19,16 +19,29 @@ app.set("view engine", "ejs");
   });
 
   // mijnTravelBuddiesMatches ///////////////////////////
-  app.get('/mijnTravelBuddiesMatches.', (req, res) => {
-    res.render('mijnTravelBuddiesMatches')
-    console.log("mijnTravelBuddiesMatches")
-  });
+  // app.get('/mijnTravelBuddiesMatches', (req, res) => {
+  //   res.render('mijnTravelBuddiesMatches')
+  //   console.log("mijnTravelBuddiesMatches")
+  // });
 
-  // favorietenTravelBuddyMatches //////////////////////////
-  app.get('/favorietenTravelBuddyMatches.', (req, res) => {
-    res.render('favorietenTravelBuddyMatches')
-    console.log(favorietenTravelBuddyMatches)
-  });
+  // // favorietenTravelBuddyMatches //////////////////////////
+  // app.post('/favorietenTravelBuddyMatches', (req, res) => {
+  //   res.render('favorietenTravelBuddyMatches')
+  //   console.log(favorietenTravelBuddyMatches)
+  // });
+
+  // app.post("/favorietenTravelBuddyMatches", async (req, res) => {
+  // await db.collection('travelbuddies').updateOne(
+    
+  //        {
+  //           _id:ObjectId(req.body.like),
+  //         },
+  //        {
+      //      $set: {like: true,}, 
+      //    }
+    //     );
+    //     res.redirect("/favorietenTravelBuddyMatches");
+    // });
 
 // MongoDB Connectie///////////////////////////////////////////////////////////////////////////
 
@@ -53,51 +66,66 @@ async function connectDB() {
 // TravelBuddy Matches ///////////////////////////////////////////////
 app.post('/mijnTravelBuddiesMatches', async (req, res) => {
 
-console.log(req.body)
+console.log(req.body) 
 
 const travelbuddies = await db.collection('travelbuddies').find({ 
   geslacht: req.body.geslacht,
   continent: req.body.continenten}).toArray();
-  
+  console.log(travelbuddies) 
 res.render('mijnTravelBuddiesMatches', {travelbuddies});
 });
 
 // Like //////////////////////////////////////////////////////////////////
-app.post("/favorietenTravelBuddyMatches", async (req, res) => {
+app.get('/favorietenTravelBuddyMatches', async (req, res) => {
 
-const favorietenTravelBuddyMatches = await db.collection('travelbuddies').updateOne(
-  {
-  _id: ObjectId(req.body.like)
-  },
-  {
-  $set: {like: true,}, 
-  }
-);
+  console.log(req.body)
   
-res.send('favorietenTravelBuddyMatches', {favorietenTravelBuddyMatches});
-});
+  const travelbuddies = await db.collection('travelbuddies').find({ 
+    like: true}).toArray();
+    $set: like: false
+    
+    console.log(travelbuddies) 
+  res.render('mijnTravelBuddiesMatches', {travelbuddies});
+  });
+
+// app.post("/favorietenTravelBuddyMatches", async (req, res) => {
+
+// const favorietenTravelBuddyMatches = await db.collection('travelbuddies').updateOne(
+//   {
+//   _id: ObjectId(req.body.like)
+//   },
+//   {
+//   $set: {like: true,}, 
+//   }
+// );
+
+// res.redirect('mijnTravelBuddiesMatches');
+// });
 
 // Dislike ///////////////////////////////////////////////////////////////
-// app.post("/removeFavoriteTravelBuddy", async (req, res) => {
-//   await db.collection('travelbuddies').updateOne(
+// app.get('/unlikeFavorietenTravelBuddyMatches', async (req, res) => {
 
-//     {
-//        _id:ObjectId(req.body.like),
-//      },
-//     {
-  //       $set: {like: true,}, 
-  //     }
-//     );
+//   console.log(req.body)
+  
+//   const travelbuddies = await db.collection('travelbuddies').find({ 
+//     like: true}).toArray();
+    
+//     console.log(travelbuddies) 
+//   res.render('mijnTravelBuddiesMatches', {travelbuddies});
+//   });
 
-//     await users.updateOne(
-//       { _id: ObjectId("62967307a4ff59e9678d2943") },
-//       { $push: { game_id: req.body.like } }
-//     );
+// app.post("/favorietenTravelBuddyMatches", async (req, res) => {
 
-//     res.redirect("/");
-//   } catch (err) {
-//     console.log(err);
+// const favorietenTravelBuddyMatches = await db.collection('travelbuddies').updateOne(
+//   {
+//   _id: ObjectId(req.body.unlike)
+//   },
+//   {
+//   $set: {like: false,}, 
 //   }
+// );
+
+// res.redirect('mijnTravelBuddiesMatches');
 // });
 
 // Callback //////////////////////////////////////////////////////////////

@@ -3,10 +3,26 @@
 
     <form action="/favorietenTravelBuddyMatches" method="post">
 
-        <button name="like" type="submit" value="<%= travelbuddy._id %>">
-            <img src="images/hartje.png" id="emptyHeart" alt="likeButton">
-        </button>
+        <% if(travelbuddy.like==true){ %>
 
+            <button name="like" type="submit" value="<%= travelbuddy._id %>">
+                
+                <img src="/images/roodHartje.png" id="emptyHeart" alt="likeButton">
+
+            </button>
+
+        <% } else{ %>
+
+            <button name="like" type="submit" value="<%= travelbuddy._id %>">
+
+                <img src="/images/hartje.png" id="emptyHeart" alt="likeButton">
+                
+            </button> 
+
+        <%} %>
+
+    </form>
+        
     </form>
     
     <ul>
@@ -16,3 +32,4 @@
         <li>land:  <%=travelbuddy.land%></li>
     </ul>
 </section>
+

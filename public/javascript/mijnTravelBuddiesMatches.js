@@ -1,23 +1,15 @@
 console.log("mijnTravelBuddiesMatches.js");
 
 // // Location Web API //History Web API////////////////////////////////////////////////////////////////////////////////////////////
-document.document.querySelector("ButtonTerug").onclick = function () {
+
+document.querySelector("#ButtonTerug").onclick = function () {
 	window.history.back();
 };
-document.document.querySelector("ButtonNavUitloggen").onclick = function () {
-	location.href = "/";
-};
 
-// // Like button //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-function liken() {
-	var image = document.querySelector('emptyHeart');
-	if (image.src.match("images/roodHartje.png")) {
-		image.src = "images/hartje.png";
-	}
-	else {
-		image.src = "images/roodHartje.png";
-	}
-}
+const ButtonFavorieten = document.getElementById("ButtonFavorieten");
+	document.getElementById("ButtonFavorieten").onclick = function () {
+	location.href = "/favorietenTravelBuddyMatches";
+};
 
 // // Google Maps Javascript API////////////////////////////////////////////////////////////////////////////////////////////
 // https://www.youtube.com/watch?v=Zxf1mnP5zcw&t=744s
