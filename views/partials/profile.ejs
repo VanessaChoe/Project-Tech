@@ -1,28 +1,23 @@
 <section>
     <img src="/<%=travelbuddy.image%>" alt="TravelBuddy Profile Image">
 
-    <form action="/favorites" method="post">
-
         <% if(travelbuddy.like==true){ %>
 
-            <button name="like" type="submit" value="<%= travelbuddy._id %>">
-                
-                <img src="/images/roodHartje.png" id="emptyHeart" alt="likeButton">
-
-            </button>
+            <form action="/like" method="post">
+                <button name="like" type="submit" value="<%= travelbuddy._id %>">
+                    <img src="/images/roodHartje.png" alt="Like button">
+                </button>
+            </form>
 
         <% } else{ %>
 
-            <button name="like" type="submit" value="<%= travelbuddy._id %>">
-
-                <img src="/images/hartje.png" id="emptyHeart" alt="likeButton">
-                
-            </button> 
-
+            <form action="/dislike" method="post"></form>
+                <button name="dislike" type="submit" value="<%= travelbuddy._id %>">
+                    <img src="/images/hartje.png" alt="Dislike button">
+                </button> 
+            </form>
         <%} %>
 
-    </form>
-    
     <ul>
         <li>Naam: <%=travelbuddy.naam%></li>
         <li>Geslacht: <%=travelbuddy.geslacht%></li>

@@ -3,7 +3,7 @@ dotenv.config();
 const { ObjectId } = require('mongodb');
 const express = require("express");
 const app = express();
-const port = process.env.PORT || 18440;
+const port = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: true }));
 
@@ -12,41 +12,17 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 
-  // Homepage ////////////////////////////////////////////
+  // Homepage //
   app.get('/', (req, res) => {
     res.render('pages/homepage')
-    console.log("homepage")
+    console.log("Homepage")
   });
 
-  app.get('/matches', (req, res) => {
-    res.render('pages/matches')
-    console.log("Matches page")
+  // Favorites page //
+  app.get('/favorites', (req, res) => {
+    res.render('pages/favorites')
+    console.log("favorites page")
   });
-
-  // mijnTravelBuddiesMatches ///////////////////////////
-  // app.get('/mijnTravelBuddiesMatches', (req, res) => {
-  //   res.render('mijnTravelBuddiesMatches')
-  //   console.log("mijnTravelBuddiesMatches")
-  // });
-
-  // // favorietenTravelBuddyMatches //////////////////////////
-  // app.post('/favorietenTravelBuddyMatches', (req, res) => {
-  //   res.render('favorietenTravelBuddyMatches')
-  //   console.log(favorietenTravelBuddyMatches)
-  // });
-
-  // app.post("/favorietenTravelBuddyMatches", async (req, res) => {
-  // await db.collection('travelbuddies').updateOne(
-    
-  //        {
-  //           _id:ObjectId(req.body.like),
-  //         },
-  //        {
-      //      $set: {like: true,}, 
-      //    }
-    //     );
-    //     res.redirect("/favorietenTravelBuddyMatches");
-    // });
 
 // MongoDB Connectie///////////////////////////////////////////////////////////////////////////
 
@@ -66,10 +42,9 @@ async function connectDB() {
   }
 };
 
-// Data uit MongoDB////////////////////////////////////////////////////////////////////////////
+// Matches ////////////////////////////////////////////////////////////////////////////
 
-// TravelBuddy Matches ///////////////////////////////////////////////
-app.get('/favorites', async (req, res) => {
+app.post('/matches', async (req, res) => {
 
 console.log(req.body) 
 
@@ -80,21 +55,33 @@ const travelbuddies = await db.collection('travelbuddies').find({
 res.render('pages/matches', {travelbuddies});
 });
 
-// Like //////////////////////////////////////////////////////////////////
+// Favorite matches /////////////////////////////////////////////////////////////////////
+
 app.get('/favorites', async (req, res) => {
-
-  console.log(req.body)
   
-  const travelbuddies = await db.collection('travelbuddies').find({ 
-    like: true}).toArray();
+  const matches = await db.collection('travelbuddies').find({ 
+    like: true,
+  }).toArray();
     
-    console.log(travelbuddies) 
-  res.render('pages/matches', {travelbuddies});
-  });
+  console.log('matches')
+res.render('pages/favorites', {matches: matches});
+});
 
-app.post("pages/favorites", async (req, res) => {
+app.post('/favorites', async (req, res) => {
+  
+  const matches = await db.collection('travelbuddies').find({ 
+    like: true,
+  }).toArray();
+    
+console.log('hallo')
+res.render('pages/favorites', {matches: matches});
+});
 
-const travelbuddies = await db.collection('travelbuddies').updateOne(
+// Like //////////////////////////////////////////////////////////////////
+
+app.post("/like", async (req, res) => {
+
+  const travelbuddies = await db.collection('travelbuddies').updateOne(
   {
   _id: ObjectId(req.body.like)
   },
@@ -103,50 +90,24 @@ const travelbuddies = await db.collection('travelbuddies').updateOne(
   }
 );
 
-res.redirect('pages/favorites', {travelbuddies});
+res.redirect('/favorites', {travelbuddies});
 });
 
-app.post("/favorites", async (req, res) => {
+// Disike //////////////////////////////////////////////////////////////////
+
+app.post("/dislike", async (req, res) => {
 
   const travelbuddies = await db.collection('travelbuddies').updateOne(
     {
     _id: ObjectId(req.body.like)
     },
     {
-    $set: {like: false,}, 
+    $set: {like: true,}, 
     }
   );
   
-  res.redirect('pages/favorites', {travelbuddies});
+  res.redirect('/favorites', {travelbuddies});
   });
-
-
-
-// Dislike ///////////////////////////////////////////////////////////////
-// app.get('/unlikeFavorietenTravelBuddyMatches', async (req, res) => {
-
-//   console.log(req.body)
-  
-//   const travelbuddies = await db.collection('travelbuddies').find({ 
-//     like: true}).toArray();
-    
-//     console.log(travelbuddies) 
-//   res.render('mijnTravelBuddiesMatches', {travelbuddies});
-//   });
-
-// app.post("/favorietenTravelBuddyMatches", async (req, res) => {
-
-// const favorietenTravelBuddyMatches = await db.collection('travelbuddies').updateOne(
-//   {
-//   _id: ObjectId(req.body.unlike)
-//   },
-//   {
-//   $set: {like: false,}, 
-//   }
-// );
-
-// res.redirect('mijnTravelBuddiesMatches');
-// });
 
 // Callback //////////////////////////////////////////////////////////////
 app.listen(port, () => {
