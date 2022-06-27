@@ -5,9 +5,11 @@ const sectionOne = document.querySelector('.geslacht');
 const labelV = document.querySelector('#vrouw');
 const labelM = document.querySelector('#man');
 const terugButton = document.querySelector('#close-button');
+const continentenButtons = document.querySelector('#labelAfrika');
 
 labelV.addEventListener('click', scrollToSection);
 labelM.addEventListener('click', scrollToSection);
+continentenButtons.addEventListener('click', scrollToMatchButtonSection);
 // terugButton.addEventListener('click', scrollToFirstSection);
 
 function scrollToSection() {
@@ -16,17 +18,17 @@ function scrollToSection() {
 	sectionOne.classList.add('verstop');
 }
 
-function scrollToFirstSection() {
+// function scrollToFirstSection() {
+// 	console.log(window.location.href)
+
+// 	window.location.hash = 'continenten';
+// }
+
+function scrollToMatchButtonSection() {
 	console.log(window.location.href)
-
-	window.location.hash = 'continenten';
+	
+	window.location.href = `${window.location.href}#matchButtonSection`
 }
 
-async function WerkendeAPI() {
-	const response = await fetch (
-		"https://maps.googleapis.com/maps/api/js?key= <%= process.enc.API_KEY %> &callback=initMap"
-	)
-
-}
 // //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

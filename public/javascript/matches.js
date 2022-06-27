@@ -1,4 +1,4 @@
-console.log("mijnTravelBuddiesMatches.js");
+console.log("matches.js");
 
 // // Location Web API //History Web API////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -8,7 +8,7 @@ document.querySelector("#ButtonTerug").onclick = function () {
 
 const ButtonFavorieten = document.getElementById("ButtonFavorieten");
 	document.getElementById("ButtonFavorieten").onclick = function () {
-	location.href = "/favorietenTravelBuddyMatches";
+	location.href = "/favorites";
 };
 
 // // Google Maps Javascript API////////////////////////////////////////////////////////////////////////////////////////////

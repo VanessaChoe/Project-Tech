@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
     
-    <%- include('partials/head') %>
+    <%- include('../partials/head') %>
 
 <body class="homepageBody">
 
     <main>
 
-    <form action="/mijnTravelBuddiesMatches" method="POST">
+    <form action="/matches" method="POST">
 
         <section>
             <h1>TravelBuddy</h1>
@@ -58,15 +58,19 @@
                 <input type="radio" name="continenten" id="Oceanie" value="Oceanie">
                 <label id="labelNoord-Oceanie" for="Oceanie">Oceanië</label>    
 
-                <button id="trigger" class="trigger">Match</button>
+                <!-- <button id="trigger" class="trigger">Match</button> -->
 
             </div>
 
         </section> 
 
+        <section id="matchButtonSection">
+            <button id="trigger" class="trigger">Match</button>
+        </section>
+
     </form> 
 
-    <script src="js/index.js"></script>
+    <script src="javascript/index.js"></script>
 
 </body>
 </html>

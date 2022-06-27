@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <%- include('../partials/head') %>
+
+<body class="favorieten">
+
+    <%- include('../partials/headerHome') %> 
+
+    <main>
+
+        <section>
+            <h1>Favoriete TravelBuddy matches</h1>
+            <h2>Zie hieronder jouw favoriete TravelBuddy matches!</h2>  
+        </section>
+
+        <!-- <a href="https://www.flaticon.com/free-icons/heart" title="heart icons">Heart icons created by Pixel perfect - Flaticon</a> -->
+        <div>  <!-- <a href="https://www.flaticon.com/free-icons/heart" title="heart icons">Heart icons created by Pixel perfect - Flaticon</a> -->
+            <% travelbuddies.forEach(function(travelbuddies){ %>
+                
+                <%- include('../partials/profile', {travelbuddy: travelbuddies}); %>
+                <button>chat</button>
+
+            <% }); %>
+        </div>
+            
+    <script src="javascript/favorites.js"></script>
+</body>
+</html>

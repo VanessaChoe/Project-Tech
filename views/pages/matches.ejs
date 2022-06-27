@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include('partials/head') %>
+    <%- include('../partials/head') %>
     
-<body class="mijnTravelBuddiesMatchesBody">
+<body class="matches">
 
-    <%- include('partials/headerTerug') %> 
+    <%- include('../partials/headerTerug') %> 
 
     <main>
     
     <section>
-        <h1>TravelBuddy</h1>
+        <h1>TravelBuddy matches</h1>
         <h2>Zie hieronder jouw TravelBuddy matches!</h2>
     </section>
 
@@ -18,9 +18,8 @@
     <div>  <!-- <a href="https://www.flaticon.com/free-icons/heart" title="heart icons">Heart icons created by Pixel perfect - Flaticon</a> -->
         <% travelbuddies.forEach(function(travelbuddy){ %>
             
-            <%- include('partials/profile', {travelbuddy: travelbuddy}); %>
+            <%- include('../partials/profile', {travelbuddy: travelbuddy}); %>
             <button>chat</button>
-
         <% }); %>
     </div>
     
@@ -34,6 +33,6 @@
 
     </main>
 
-    <script src="javascript/mijnTravelBuddiesMatches.js"></script>  
+    <script src="javascript/matches.js"></script>  
 </body>
 </html>
