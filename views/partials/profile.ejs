@@ -3,19 +3,24 @@
 
         <% if(travelbuddy.like==true){ %>
 
-            <form action="/like" method="post">
-                <button name="like" type="submit" value="<%= travelbuddy._id %>">
-                    <img src="/images/roodHartje.png" alt="Like button">
-                </button>
+            <form action="/unlike" method="post">
+
+                <button name="unlike" type="submit" value="<%= travelbuddy._id %>">
+                    <img src="/images/roodHartje.png" alt="Unlike button">
+                </button> 
+
             </form>
 
         <% } else{ %>
 
-            <form action="/dislike" method="post"></form>
-                <button name="dislike" type="submit" value="<%= travelbuddy._id %>">
-                    <img src="/images/hartje.png" alt="Dislike button">
-                </button> 
+            <form action="/like" method="post">
+
+                <button name="like" type="submit" value="<%= travelbuddy._id %>">
+                    <img src="/images/hartje.png" alt="Like button">
+                </button>
+
             </form>
+
         <%} %>
 
     <ul>
