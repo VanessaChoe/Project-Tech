@@ -40,29 +40,20 @@ app.set("view engine", "ejs");
 
 // Matches ////////////////////////////////////////////////////////////////////////////
 
-// app.get('/travelbuddies', async (req, res) => {
+app.get('/travelbuddies', async (req, res) => {
 
-//   const travelbuddies = await db.collection('travelbuddies').find({ 
-//     like: true,
-//     }).toArray();
+  const travelbuddies = await db.collection('travelbuddies').find({ 
+    geslacht: req.query.geslacht,
+    continent: req.query.continenten}).toArray();
     
-//   console.log('Favorite page')
+  console.log('Favorite page')
 
-// res.render('pages/matches', {travelbuddies})
-// });
+res.render('pages/matches', {travelbuddies, geslacht:req.query.geslacht, continenten:req.query.continenten});
+});
 
 app.post('/travelbuddies', async (req, res) => {
 
-console.log(req.body) 
-
-const travelbuddies = await db.collection('travelbuddies').find({ 
-
-  geslacht: req.body.geslacht,
-  continent: req.body.continenten}).toArray();
-
-  console.log(travelbuddies) 
-
-res.render('pages/matches', {travelbuddies});
+res.redirect(`/travelbuddies?geslacht=${req.body.geslacht}&continenten=${req.body.continenten}`);
 });
 
 // Like //////////////////////////////////////////////////////////////////
@@ -77,8 +68,11 @@ app.post("/like", async (req, res) => {
     $set: { like: true},
     }
     );
+
+  const travelbuddies = await db.collection('travelbuddies').find({ 
+    like: true,}).toArray();
     
-res.redirect("/favorites");  
+    res.render('pages/favorites', {travelbuddies, geslacht:req.query.geslacht, continenten:req.query.continenten});
 });
 
 // Unlike //////////////////////////////////////////////////////////////////
@@ -94,7 +88,10 @@ app.post('/unlike', async (req, res) => {
     }
     );
 
-res.redirect('/favorites');
+    const travelbuddies = await db.collection('travelbuddies').find({ 
+      like: true,}).toArray();
+
+    res.render('pages/favorites', {travelbuddies, geslacht:req.query.geslacht, continenten:req.query.continenten});
 
 });
 
@@ -107,7 +104,7 @@ app.get('/favorites', async (req, res) => {
     
   console.log('Favorite page')
 
-res.render('pages/favorites', {travelbuddies});
+res.render('pages/favorites', {travelbuddies, geslacht:req.query.geslacht, continenten:req.query.continenten});
 });
 
 // Callback //////////////////////////////////////////////////////////////

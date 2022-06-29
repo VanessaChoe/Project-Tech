@@ -3,7 +3,7 @@
 
         <% if(travelbuddy.like==true){ %>
 
-            <form action="/unlike" method="post">
+            <form action="/unlike?geslacht=<%=geslacht%>&continenten=<%=continenten%>" method="post">
 
                 <button name="unlike" type="submit" value="<%= travelbuddy._id %>">
                     <img src="/images/roodHartje.png" alt="Unlike button">
@@ -13,7 +13,7 @@
 
         <% } else{ %>
 
-            <form action="/like" method="post">
+            <form action="/like?geslacht=<%=geslacht%>&continenten=<%=continenten%>" method="post">
 
                 <button name="like" type="submit" value="<%= travelbuddy._id %>">
                     <img src="/images/hartje.png" alt="Like button">

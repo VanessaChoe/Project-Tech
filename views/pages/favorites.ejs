@@ -23,6 +23,17 @@
             <% }); %>
         </div>
             
-    <script src="javascript/favorites.js"></script>
+        <script>
+            const ButtonTerug = document.getElementById("ButtonTerug");
+	        document.getElementById("ButtonTerug").onclick = function () {
+	        location.href = "/travelbuddies?geslacht=<%=geslacht%>&continenten=<%=continenten%>";
+            };
+
+            const ButtonHome = document.getElementById("ButtonHome");
+	        document.getElementById("ButtonHome").onclick = function () {
+	        location.href = "/";
+            };
+        </script>
+
 </body>
 </html>
