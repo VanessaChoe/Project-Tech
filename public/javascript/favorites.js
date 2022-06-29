@@ -2,7 +2,7 @@
 // 	window.history.back();
 // };
 
-const ButtonHome = document.getElementById("ButtonTerug");
+const ButtonTerug = document.getElementById("ButtonTerug");
 	document.getElementById("ButtonTerug").onclick = function () {
 	location.href = "/travelbuddies";
 };
