@@ -36,21 +36,20 @@ app.set("view engine", "ejs");
     console.log("Homepage")
   });
 
-  
+
 
 // Matches ////////////////////////////////////////////////////////////////////////////
 
-app.get('/matches', async (req, res) => {
+// app.get('/travelbuddies', async (req, res) => {
 
-  const travelbuddies = await db.collection('travelbuddies').find({ 
-    like: true,
-    }).toArray();
+//   const travelbuddies = await db.collection('travelbuddies').find({ 
+//     like: true,
+//     }).toArray();
     
-  console.log('Favorite page')
+//   console.log('Favorite page')
 
-res.render('pages/matches', {travelbuddies})
-});
-
+// res.render('pages/matches', {travelbuddies})
+// });
 
 app.post('/travelbuddies', async (req, res) => {
 

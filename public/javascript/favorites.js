@@ -1,5 +1,10 @@
-document.querySelector("#ButtonTerug").onclick = function () {
-	location.replace("http://localhost:3000/travelbuddies");
+// document.querySelector("#ButtonTerug").onclick = function () {
+// 	window.history.back();
+// };
+
+const ButtonHome = document.getElementById("ButtonTerug");
+	document.getElementById("ButtonTerug").onclick = function () {
+	location.href = "/travelbuddies";
 };
 
 const ButtonHome = document.getElementById("ButtonHome");
