@@ -1,19 +1,38 @@
 console.log("index.js");
 
 // // Location Web API //////////////////////////////////////////////////////////////////////////////////////////////
-const labelV = document.querySelector('#vrouw');
-const labelM = document.querySelector('#man');
+const vrouw = document.querySelector('#vrouw');
+const man = document.querySelector('#man');
+
+const Afrika = document.querySelector('#Afrika');
+const ZuidAmerika = document.querySelector('#Zuid-Amerika');
+const Azie = document.querySelector('#Azie');
+const Europa = document.querySelector('#Europa');
+const NoordAmerika = document.querySelector('#Noord-Amerika');
+const Oceanie = document.querySelector('#Oceanie');
 
 const matchButton = document.querySelector('#matchButtonSection');
 
-labelV.addEventListener('click', scrollToContinentenSection);
-labelM.addEventListener('click', scrollToContinentenSection);
+Afrika.addEventListener('click', scrollToMatchButton);
+ZuidAmerika.addEventListener('click', scrollToMatchButton);
+Azie.addEventListener('click', scrollToMatchButton);
+Europa.addEventListener('click', scrollToMatchButton);
+NoordAmerika.addEventListener('click', scrollToMatchButton);
+Oceanie.addEventListener('click', scrollToMatchButton);
+
+vrouw.addEventListener('click', scrollToContinentenSection);
+man.addEventListener('click', scrollToContinentenSection);
 
 function scrollToContinentenSection() {
 	console.log(window.location.href)
 	
-	window.location.href = `${window.location.href}#continentenH1`
+	window.location.hash = '#continenten'
 }
 
+function scrollToMatchButton() {
+	console.log(window.location.href)
+	
+	window.location.hash = `#matchButtonSection`
+}
 // //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
