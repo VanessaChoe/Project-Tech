@@ -32,6 +32,6 @@ function scrollToContinentenSection() {
 function scrollToMatchButton() {
   console.log(window.location.href);
 
-  window.location.hash = `#matchButtonSection`;
+  window.location.hash = "#matchButtonSection";
 }
 // //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
