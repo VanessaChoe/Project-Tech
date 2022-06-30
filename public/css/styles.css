@@ -15,6 +15,10 @@ body{
     background-color: #E8E8E8;
 }
 
+nav{
+    margin-top: 2em;
+}
+
 form section:first-of-type{
     display: flex;
     justify-content: center;
@@ -38,7 +42,9 @@ form section:first-of-type h2{
 } 
 
 
-/* ///////////////////////////////////////////////// */
+
+/* ///Homepage///////////////////////////////////////////////////////////////////////////// */
+/* ///Homepage, form --> geslacht section ////////////////////////////////////////////// */
 .geslacht{
     display:flex;
     justify-content: center;
@@ -109,8 +115,13 @@ form section:first-of-type h2{
     color: white;
 }
 
+/* class toegvoegd met CSS en JavaScript */
+/*/// section geslacht van homepage.ejs*/
+.verstop {
+    display: none;
+}
 
-
+/* ///Homepage, form --> continenten section ////////////////////////////////////////////// */
 .continenten{
     display:flex;
     justify-content: center;
@@ -119,25 +130,25 @@ form section:first-of-type h2{
     margin-top: -3em;
 }
 .continenten h1{
+    color: black;
     display: flex;
     position: absolute;
-    margin-top: 10em;
+    margin-top: 14em;
     margin-bottom: 15em;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 1.2em;
-    color: white;
     justify-content: center;
     text-align: center;
 }
-.continenten h1{
-    color: black;
-}
+
+/* /// Radiobuttons in form*/
 .continenten div{
-    margin-top: 20em;
+    margin-top: 22em;
     display: grid;
     list-style: none;
 }
+
 .continenten div label{
     color: black;
     font-family: 'Lato', sans-serif;
@@ -176,7 +187,13 @@ form section:first-of-type h2{
     color: white;
 }
 
-.trigger{
+/* /// Match button in form*/
+#matchButtonSection{
+    margin-bottom: 12em;
+    justify-content: center;
+    text-align: center;
+}
+.matchButton{
     color: white;
     background-color: #3481F3;
     font-family: 'Lato', sans-serif;
@@ -189,54 +206,47 @@ form section:first-of-type h2{
     width: 15em;
     text-align: center;
     font-size: 0.9em; 
-    margin-top: 3em;
+    margin-top: 9em;
 }
+
 .continenten button:hover{
     transform: scale(1.06);
 }
 
-/* //Header/////////////////////////////////////////////// */
-.matches header{
-    display: flex;
-    justify-content: center;
-    /* position: relative; */
-}
-.matches header nav button{
-    background-color: #3481F3;
+
+/* ///Matches page //////////////////////////////////////////////////////////////////////////// */
+/* ///Matches page, form --> nav buttons ////////////////////////////////////////////// */
+#buttonTerug{
     border-radius: 50%;
     border: solid #3481F3;
-    width: 4.5em;
+    width: 4em;
+    height: 4em;
+    background-color: #3481F3;
+    float: left;
+    margin-left: 3em;
 }
-.matches header nav button:first-of-type{
-    height: 4.5em;
-    margin-right: 63em;
-}
-.matches header nav button:nth-child(2){
-    height: 4.5em;
-    margin-top: -0.5em;
-}
-.matches header nav button:first-of-type:hover{
-    transform: scale(1.1);
-}
-.matches header nav button:nth-child(2):hover{
-    transform: scale(1.1);
-}
-#ButtonTerug img{
-    width: 2.25em;
-}
-#ButtonFavorieten img{
-    width: 2.25em;
-    justify-content: center;
-    margin-top: 0.55em;
-}
-/* ////////////////////////////////////////////////// */
-
-#matchButtonSection{
-    margin-bottom: 12em;
-    justify-content: center;
-    text-align: center;
+#buttonTerug img{
+    width: 2.5em;
 }
 
+#favorietenButton{
+    border-radius: 50%;
+    border: solid #3481F3;
+    width: 3.3em;
+    height: 3.3em;
+    display: flex;
+    background-color: #3481F3;
+    justify-content: center;
+    float: right;
+    margin-right: 3em;
+}
+#favorietenButton img{
+    width: 1.6em;
+    height: 1.6em;
+    margin: auto;
+}
+
+/* /// Matches page --> section 1 //////////////////////////////////////////////////////////////// */
 .matches main section:first-of-type h1{
     font-family: 'Lato', sans-serif;
     font-weight: 700;
@@ -253,6 +263,7 @@ form section:first-of-type h2{
     text-align: center;
 }
 
+/* /// Matches page --> div, template matches profile //////////////////////////////////////////////////////////////// */
 .matches main div:first-of-type{
     display: grid;
     justify-content: center;
@@ -260,6 +271,8 @@ form section:first-of-type h2{
     margin: auto;
     margin-top: 3em;
 }
+
+/* Chat button */
 .matches main div button{
     color: white;
     background-color: #3481F3;
@@ -274,6 +287,7 @@ form section:first-of-type h2{
     transform: scale(1.1);
 }
 
+/* Match profielfoto */
 .matches main div section{
     background-color: white;
     border-radius: 0.6em;
@@ -290,9 +304,13 @@ form section:first-of-type h2{
     margin-left: 1.5em;
     margin-top: 2.5em;
 }
+
+/* Form --> Like en unlike */
 .matches main div section form{
     margin-left: 16em;
 }
+
+/* Form --> Like button */
 .matches main div section form button{
     margin-left: -5.5em;
     color: transparent;
@@ -321,6 +339,7 @@ form section:first-of-type h2{
     margin-top: 0.25em;
 }
 
+/* Form --> ul van data matches */
 .matches main div section ul{
     margin-top: 0.5em;
 }
@@ -329,55 +348,43 @@ form section:first-of-type h2{
     list-style: none;
 }
 
-/* added classes with css and JavaScript */
-/*/// section form index.ejs*/
-.verstop {
-    display: none;
-}
+/* Google Maps Public API */
 
-/* favorietenTravelBuddyMatchesBody //////////////////////////////////////////////////////////////////*/
+.matches #map{
+    height: 400px;
+    width: 100%;
+} 
+/* //////////////////////////////////////////////////////////////////////////////////////////// */
 
-.favorieten{
-    background-color: #3481F3;
-}
 
-.favorieten header{
-    display: flex;
-    justify-content: center;
-    /* position: relative; */
-}
-.favorieten header nav button{
-    background-color: green;
+
+/* ///Favorieten pagina //////////////////////////////////////////////////////////////////////////// */
+/* ///Favoriten pagina --> nav buttons ////////////////////////////////////////////// */
+#buttonHome{
     border-radius: 50%;
     border: solid #3481F3;
-    width: 4.5em;
-}
-.favorieten header nav button:hover{
-    transform: scale(1.1);
-}
-.favorieten header nav button:first-of-type{
-    height: 4.5em;
-    margin-right: 63em;
-}
-.favorieten header nav button:nth-child(2){
-    height: 4.5em;
-    margin-top: -0.5em;
-}
-#ButtonTerug img{
-    width: 2.25em;
-}
-#ButtonHome img{
-    width: 2.25em;
+    width: 4.1em;
+    height: 4.1em;
+    display: flex;
+    background-color: #3481F3;
     justify-content: center;
-    margin-top: 0.55em;
+    float: right;
+    margin-right: 3em;
+}
+#buttonHome img{
+    width: 2em;
+    height: 2em;
+    margin: auto;
 }
 
+/* ///Favorieten pagina //////////////////////////////////////////////////////////////////////////// */
+/* ///Favorieten pagina --> section ////////////////////////////////////////////// */
 .favorieten main section:first-of-type h1{
     font-family: 'Lato', sans-serif;
     font-weight: 700;
     text-align: center;
     font-size: 3em; 
-    color: white;
+    color: #3481F3;
 }
 .favorieten main section:first-of-type h2{
     font-family: 'Lato', sans-serif;
@@ -388,6 +395,7 @@ form section:first-of-type h2{
     text-align: center;
 }
 
+/* /// Favoriten pagina page --> div, template matches profile //////////////////////////////////////////////////////////////// */
 .favorieten main div{
     display: grid;
     justify-content: center;
@@ -427,6 +435,8 @@ form section:first-of-type h2{
 .favorieten main div section form{
     margin-left: 16em;
 }
+
+/* Form --> Like button */
 .favorieten main div section form button{
     margin-left: -5.5em;
     color: transparent;
@@ -440,6 +450,8 @@ form section:first-of-type h2{
     height: 2.3em;
     margin-top: 0.25em;
 }
+
+/* Form --> ul van data matches */
 .favorieten main div section ul{
     margin-top: 0.5em;
 }
@@ -447,3 +459,4 @@ form section:first-of-type h2{
     margin-left: 10.6em;
     list-style: none;
 }
+/* //////////////////////////////////////////////////////////////////////////////////// */

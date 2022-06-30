@@ -33,10 +33,8 @@ app.set("view engine", "ejs");
   // Homepage //
   app.get('/', (req, res) => {
     res.render('pages/homepage')
-    console.log("Homepage")
+    console.log("/Homepage")
   });
-
-
 
 // Matches ////////////////////////////////////////////////////////////////////////////
 
@@ -46,7 +44,7 @@ app.get('/travelbuddies', async (req, res) => {
     geslacht: req.query.geslacht,
     continent: req.query.continenten}).toArray();
     
-  console.log('Favorite page')
+  console.log('/travelbuddies matches')
 
 res.render('pages/matches', {travelbuddies, geslacht:req.query.geslacht, continenten:req.query.continenten});
 });
@@ -60,7 +58,8 @@ res.redirect(`/travelbuddies?geslacht=${req.body.geslacht}&continenten=${req.bod
 
 app.post("/like", async (req, res) => {
 
-  await db.collection('travelbuddies').updateOne(
+  try {
+    await db.collection('travelbuddies').updateOne(
     {
     _id: ObjectId(req.body.like),
     },
@@ -72,13 +71,17 @@ app.post("/like", async (req, res) => {
   const travelbuddies = await db.collection('travelbuddies').find({ 
     like: true,}).toArray();
     
-    res.render('pages/favorites', {travelbuddies, geslacht:req.query.geslacht, continenten:req.query.continenten});
+  res.render('pages/favorites', {travelbuddies, geslacht:req.query.geslacht, continenten:req.query.continenten});
+} catch (err) {
+  res.status(404).send('404');
+}
 });
 
 // Unlike //////////////////////////////////////////////////////////////////
 
 app.post('/unlike', async (req, res) => {
  
+  try {
   await db.collection('travelbuddies').updateOne(
     {
       _id: ObjectId(req.body.unlike),
@@ -89,22 +92,31 @@ app.post('/unlike', async (req, res) => {
     );
 
     const travelbuddies = await db.collection('travelbuddies').find({ 
+      
       like: true,}).toArray();
 
-    res.render('pages/favorites', {travelbuddies, geslacht:req.query.geslacht, continenten:req.query.continenten});
+res.render('pages/favorites', {travelbuddies, geslacht:req.query.geslacht, continenten:req.query.continenten});
+} catch (err) {
+res.status(404).send('404');
+}
 
 });
 
 // Favorite matches ////////////////////////////////////////////////////////////////////
 
 app.get('/favorites', async (req, res) => {
-  
+
+  try {
   const travelbuddies = await db.collection('travelbuddies').find({ 
+
     like: true,}).toArray();
     
   console.log('Favorite page')
 
 res.render('pages/favorites', {travelbuddies, geslacht:req.query.geslacht, continenten:req.query.continenten});
+} catch (err) {
+  res.status(404).send('404');
+}
 });
 
 // Callback //////////////////////////////////////////////////////////////
@@ -117,6 +129,5 @@ app.listen(port, () => {
 // Error 404 Page ////////////////////////////////////////////////////////
 app.use(function (req, res){
    console.error("Error 404:page not found");
-   // res.status(404).render('404', {title: "Error 404: page not found"});
    res.status(404).send('404');
 }); 

@@ -9,30 +9,31 @@
 
     <main>
     
-    <section>
-        <h1>TravelBuddy matches</h1>
-        <h2>Zie hieronder jouw TravelBuddy matches!</h2>
-    </section>
+        <section>
+            <h1>TravelBuddy matches</h1>
+            <h2>Zie hieronder jouw TravelBuddy matches!</h2>
+        </section>
 
-    <!-- <a href="https://www.flaticon.com/free-icons/heart" title="heart icons">Heart icons created by Pixel perfect - Flaticon</a> -->
-    <div>  <!-- <a href="https://www.flaticon.com/free-icons/heart" title="heart icons">Heart icons created by Pixel perfect - Flaticon</a> -->
-        <% travelbuddies.forEach(function(travelbuddies){ %>
-            
-            <%- include('../partials/profile', {travelbuddy: travelbuddies}); %>
-            <button>chat</button>
-        <% }); %>
-    </div>
-    
-    <section class="mapSection"> 
-        <div id="map"></div>
-    </section> 
-    
-    <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtgysJJ2BONsQ4OOV_AD0yYA9dOnp6lF8&callback=initMap">
-    </script>
+        <!-- <a href="https://www.flaticon.com/free-icons/heart" title="heart icons">Heart icons created by Pixel perfect - Flaticon</a> -->
+        <div>  <!-- <a href="https://www.flaticon.com/free-icons/heart" title="heart icons">Heart icons created by Pixel perfect - Flaticon</a> -->
+            <% travelbuddies.forEach(function(travelbuddies){ %>
+                
+                <%- include('../partials/profile', {travelbuddy: travelbuddies}); %>
+                <button>chat</button>
+            <% }); %>
+        </div>
+        
+        <section class="mapSection"> 
+            <div id="map"></div>
+        </section> 
+
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?+key=${API_KEY}&callback=initMap">
+        </script>
 
     </main>
 
     <script src="javascript/matches.js"></script>  
+
 </body>
 </html>

@@ -7,7 +7,7 @@
 
     <main>
 
-    <form action="/travelbuddies" method="POST">
+    <form action="/travelbuddies" name="matchesFormulier"method="POST">
 
         <section>
             <h1>TravelBuddy</h1>
@@ -34,11 +34,11 @@
 
         <section id="continenten" class="continenten">
 
-            <h1>Kies een continent.</h1>
+            <h1 id="continentenH1">Kies een continent.</h1>
 
             <div>
 
-                <input type="radio" name="continenten" id="Afrika" value="Afrika">    
+                <input type="radio" name="continenten" id="Afrika" value="Afrika">
                 <label id="labelAfrika" for="Afrika">Afrika</label>
 
                 <input type="radio" name="continenten" id="Zuid-Amerika" value="Zuid-Amerika">
@@ -58,15 +58,13 @@
                 
                 <input type="radio" name="continenten" id="Oceanie" value="Oceanie">
                 <label id="labelNoord-Oceanie" for="Oceanie">Oceanië</label>    
-
-                <!-- <button id="trigger" class="trigger">Match</button> -->
-
+                
             </div>
 
         </section> 
 
         <section id="matchButtonSection">
-            <button id="trigger" class="trigger">Match</button>
+            <button class="matchButton" >Match</button>
         </section>
 
     </form> 

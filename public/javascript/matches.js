@@ -1,19 +1,22 @@
 console.log("matches.js");
 
 // // Location Web API //History Web API////////////////////////////////////////////////////////////////////////////////////////////
+const terugButton = document.getElementById("buttonTerug");
+document.getElementById('buttonTerug').addEventListener('click', () => {
+	history.back();
+  });
 
-document.querySelector("#ButtonTerug").onclick = function () {
-	window.history.back();
-};
-
-const ButtonFavorieten = document.getElementById("ButtonFavorieten");
-	document.getElementById("ButtonFavorieten").onclick = function () {
+const ButtonFavorieten = document.getElementById("favorietenButton");
+	document.getElementById("favorietenButton").onclick = function () {
 	location.href = "/favorites";
 };
 
 // // Google Maps Javascript API////////////////////////////////////////////////////////////////////////////////////////////
 // https://www.youtube.com/watch?v=Zxf1mnP5zcw&t=744s
 // https://developers.google.com/maps/documentation/javascript
+
+const API_KEY = process.env.API_KEY;
+
 function initMap(){
 	const options = {
 		zoom:10,
@@ -28,3 +31,5 @@ function initMap(){
 		icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png' // Google maps Vlaggetje op de kaart
 	});
 }
+
+
