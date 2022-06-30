@@ -272,6 +272,11 @@ form section:first-of-type h2{
     margin-top: 3em;
 }
 
+/* /// ul */
+.matches main div section ul{
+    margin-top: 1.5em;
+}
+
 /* Chat button */
 .matches main div button{
     color: white;
@@ -281,7 +286,7 @@ form section:first-of-type h2{
     border-radius: 0.4em;
     border: #3481F3;
     margin-top: -5.7em;
-    margin-left: 12.6em;
+    margin-left: 7.9em;
 }
 .matches main div button:hover{
     transform: scale(1.1);
@@ -344,7 +349,7 @@ form section:first-of-type h2{
     margin-top: 0.5em;
 }
 .matches main div section ul li{
-    margin-left: 10.6em;
+    margin-left: 6.7em;
     list-style: none;
 }
 
