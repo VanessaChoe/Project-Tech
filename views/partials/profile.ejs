@@ -1,32 +1,26 @@
 <section>
+    <% if(travelbuddy.like==true){ %>
 
-        <% if(travelbuddy.like==true){ %>
+    <form action="/unlike?geslacht=<%=geslacht%>&continenten=<%=continenten%>" method="post">
+        <button name="unlike" type="submit" value="<%= travelbuddy._id %>">
+            <img src="./images/roodHartje.png" alt="Unlike button" />
+        </button>
+    </form>
 
-            <form action="/unlike?geslacht=<%=geslacht%>&continenten=<%=continenten%>" method="post">
+    <% } else{ %>
 
-                <button name="unlike" type="submit" value="<%= travelbuddy._id %>">
-                    <img src="./images/roodHartje.png" alt="Unlike button">
-                </button> 
+    <form action="/like?geslacht=<%=geslacht%>&continenten=<%=continenten%>" method="post">
+        <button name="like" type="submit" value="<%= travelbuddy._id %>">
+            <img src="./images/hartje.png" alt="Like button" />
+        </button>
+    </form>
 
-            </form>
-
-        <% } else{ %>
-
-            <form action="/like?geslacht=<%=geslacht%>&continenten=<%=continenten%>" method="post">
-
-                <button name="like" type="submit" value="<%= travelbuddy._id %>">
-                    <img src="./images/hartje.png" alt="Like button">
-                </button>
-
-            </form>
-
-        <%} %>
+    <%} %>
 
     <ul>
         <li>Naam: <%=travelbuddy.naam%></li>
         <li>Geslacht: <%=travelbuddy.geslacht%></li>
         <li>Continent: <%=travelbuddy.continent%></li>
-        <li>land:  <%=travelbuddy.land%></li>
+        <li>land: <%=travelbuddy.land%></li>
     </ul>
 </section>
-

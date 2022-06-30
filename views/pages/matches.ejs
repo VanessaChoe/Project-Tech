@@ -1,39 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <%- include('../partials/head') %>
-    
-<body class="matches">
 
-    <%- include('../partials/headerTerug') %> 
+    <body class="matches">
+        <%- include('../partials/headerTerug') %>
 
-    <main>
-    
-        <section>
-            <h1>TravelBuddy matches</h1>
-            <h2>Zie hieronder jouw TravelBuddy matches!</h2>
-        </section>
+        <main>
+            <section>
+                <h1>TravelBuddy matches</h1>
+                <h2>Zie hieronder jouw TravelBuddy matches!</h2>
+            </section>
 
-        <!-- <a href="https://www.flaticon.com/free-icons/heart" title="heart icons">Heart icons created by Pixel perfect - Flaticon</a> -->
-        <div>  <!-- <a href="https://www.flaticon.com/free-icons/heart" title="heart icons">Heart icons created by Pixel perfect - Flaticon</a> -->
-            <% travelbuddies.forEach(function(travelbuddies){ %>
-                
-                <%- include('../partials/profile', {travelbuddy: travelbuddies}); %>
+            <!-- <a href="https://www.flaticon.com/free-icons/heart" title="heart icons">Heart icons created by Pixel perfect - Flaticon</a> -->
+            <div>
+                <!-- <a href="https://www.flaticon.com/free-icons/heart" title="heart icons">Heart icons created by Pixel perfect - Flaticon</a> -->
+                <% travelbuddies.forEach(function(travelbuddies){ %> <%-
+                include('../partials/profile', {travelbuddy: travelbuddies}); %>
                 <button>chat</button>
-            <% }); %>
-        </div>
-        
-        <section class="mapSection"> 
-            <div id="map"></div>
-        </section> 
+                <% }); %>
+            </div>
 
-        <script async defer
-        src="https://maps.googleapis.com/maps/api/js?+key=${API_KEY}&callback=initMap">
-        </script>
+            <section class="mapSection">
+                <div id="map"></div>
+            </section>
 
-    </main>
+            <script
+                async
+                defer
+                src="https://maps.googleapis.com/maps/api/js?+key=${API_KEY}&callback=initMap"
+            ></script>
+        </main>
 
-    <script src="javascript/matches.js"></script>  
-
-</body>
+        <script src="javascript/matches.js"></script>
+    </body>
 </html>

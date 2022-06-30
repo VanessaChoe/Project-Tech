@@ -1,467 +1,462 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap");
 
 /* https://www.youtube.com/watch?v=LY1jeQGUiAI */
-*{
-    padding: 0;
-    margin: 0; 
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
-body{
-    background-color: #E8E8E8;
+body {
+  background-color: #e8e8e8;
 }
 
-nav{
-    margin-top: 2em;
+nav {
+  margin-top: 2em;
 }
 
-form section:first-of-type{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    margin-top: 4em;
+form section:first-of-type {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 4em;
 }
-form section:first-of-type h1{
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;
-    font-size: 3em; 
-    color: #3481F3;
+form section:first-of-type h1 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 3em;
+  color: #3481f3;
 }
-form section:first-of-type h2{
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: 1.2em;
-    color: black;
-    justify-content: center;
-    text-align: center;
-} 
-
-
+form section:first-of-type h2 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.2em;
+  color: black;
+  justify-content: center;
+  text-align: center;
+}
 
 /* ///Homepage///////////////////////////////////////////////////////////////////////////// */
 /* ///Homepage, form --> geslacht section ////////////////////////////////////////////// */
-.geslacht{
-    display:flex;
-    justify-content: center;
-    text-align: center;
-    flex-wrap: row;
-    margin-bottom: 1em;
-    margin-top: -3em;
+.geslacht {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: row;
+  margin-bottom: 1em;
+  margin-top: -3em;
 }
-.geslacht h1{
-    display: flex;
-    position: absolute;
-    margin-top: 10em;
-    margin-bottom: 15em;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: 1.2em;
-    color: black;
-    justify-content: center;
-    text-align: center;
+.geslacht h1 {
+  display: flex;
+  position: absolute;
+  margin-top: 10em;
+  margin-bottom: 15em;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.2em;
+  color: black;
+  justify-content: center;
+  text-align: center;
 }
-.geslacht div{
-    margin-top: 20em;
-    display: grid;
-    list-style: none;
+.geslacht div {
+  margin-top: 20em;
+  display: grid;
+  list-style: none;
 }
-.geslacht div label{
-    color: black;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;   
-    border: 0.1em solid white;
-    padding: 1.5em 1.25em;
-    margin: 0;
-    border-radius: 0.4em;
-    cursor: pointer;
-    width: 15em;
-    text-align: center;
-    font-size: 0.9em; 
-    background-color: white;   
+.geslacht div label {
+  color: black;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  border: 0.1em solid white;
+  padding: 1.5em 1.25em;
+  margin: 0;
+  border-radius: 0.4em;
+  cursor: pointer;
+  width: 15em;
+  text-align: center;
+  font-size: 0.9em;
+  background-color: white;
 }
-.geslacht div label:hover{
-    transform: scale(1.06);
-    color: #3481F3;
-    background-color:  white;
-    border: 0.2em solid #3481F3;
+.geslacht div label:hover {
+  transform: scale(1.06);
+  color: #3481f3;
+  background-color: white;
+  border: 0.2em solid #3481f3;
 }
-.geslacht div label a{
-    color: black;
-    text-decoration: none;
+.geslacht div label a {
+  color: black;
+  text-decoration: none;
 }
-.geslacht div label a:hover{
-    color: white;
-    text-decoration: none;
+.geslacht div label a:hover {
+  color: white;
+  text-decoration: none;
 }
 
 .geslacht div input[type="radio"] {
-    display: flex;
-    visibility: hidden;
-    opacity: 0;
-    margin-left: -1.3em;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  margin-left: -1.3em;
 }
-.geslacht div input[type="radio"]+label:active {
-    color: #3481F3;
-    background-color: white;
-    border: none;
+.geslacht div input[type="radio"] + label:active {
+  color: #3481f3;
+  background-color: white;
+  border: none;
 }
-.geslacht div input[type="radio"]:checked+label {
-    background-color: #3481F3;
-    color: white;
+.geslacht div input[type="radio"]:checked + label {
+  background-color: #3481f3;
+  color: white;
 }
 
 /* class toegvoegd met CSS en JavaScript */
 /*/// section geslacht van homepage.ejs*/
 .verstop {
-    display: none;
+  display: none;
 }
 
 /* ///Homepage, form --> continenten section ////////////////////////////////////////////// */
-.continenten{
-    display:flex;
-    justify-content: center;
-    text-align: center;
-    flex-wrap: row;
-    margin-top: -3em;
+.continenten {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: row;
+  margin-top: -3em;
 }
-.continenten h1{
-    color: black;
-    display: flex;
-    position: absolute;
-    margin-top: 14em;
-    margin-bottom: 15em;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: 1.2em;
-    justify-content: center;
-    text-align: center;
+.continenten h1 {
+  color: black;
+  display: flex;
+  position: absolute;
+  margin-top: 14em;
+  margin-bottom: 15em;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.2em;
+  justify-content: center;
+  text-align: center;
 }
 
 /* /// Radiobuttons in form*/
-.continenten div{
-    margin-top: 22em;
-    display: grid;
-    list-style: none;
+.continenten div {
+  margin-top: 22em;
+  display: grid;
+  list-style: none;
 }
 
-.continenten div label{
-    color: black;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;   
-    border: 0.1em solid white;
-    padding: 1.5em 1.25em;
-    margin: 0;
-    border-radius: 0.4em;
-    cursor: pointer;
-    width: 15em;
-    text-align: center;
-    font-size: 0.9em; 
-    background-color: white;    
+.continenten div label {
+  color: black;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  border: 0.1em solid white;
+  padding: 1.5em 1.25em;
+  margin: 0;
+  border-radius: 0.4em;
+  cursor: pointer;
+  width: 15em;
+  text-align: center;
+  font-size: 0.9em;
+  background-color: white;
 }
-.continenten div label:hover{
-    transform: scale(1.06);
-    color: #3481F3;
-    background-color:  white;
-    border: 0.2em solid #3481F3;
+.continenten div label:hover {
+  transform: scale(1.06);
+  color: #3481f3;
+  background-color: white;
+  border: 0.2em solid #3481f3;
 }
 
 .continenten div input[type="radio"] {
-    display: flex;
-    visibility: hidden;
-    opacity: 0; 
-    margin-left: -1.3em;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  margin-left: -1.3em;
 }
-.continenten div input[type="radio"]+label:active {
-    color: #3481F3;
-    background-color: white;
-    border: none;
-    border: 0.1em solid #3481F3;
+.continenten div input[type="radio"] + label:active {
+  color: #3481f3;
+  background-color: white;
+  border: none;
+  border: 0.1em solid #3481f3;
 }
-.continenten div input[type="radio"]:checked+label {
-    background-color: #3481F3;
-    color: white;
+.continenten div input[type="radio"]:checked + label {
+  background-color: #3481f3;
+  color: white;
 }
 
 /* /// Match button in form*/
-#matchButtonSection{
-    margin-bottom: 12em;
-    justify-content: center;
-    text-align: center;
+#matchButtonSection {
+  margin-bottom: 12em;
+  justify-content: center;
+  text-align: center;
 }
-.matchButton{
-    color: white;
-    background-color: #3481F3;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;   
-    border: 0.1em solid #3481F3;
-    padding: 1.5em 1.25em;
-    margin: 0;
-    border-radius: 0.4em;
-    cursor: pointer;
-    width: 15em;
-    text-align: center;
-    font-size: 0.9em; 
-    margin-top: 9em;
-}
-
-.continenten button:hover{
-    transform: scale(1.06);
+.matchButton {
+  color: white;
+  background-color: #3481f3;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  border: 0.1em solid #3481f3;
+  padding: 1.5em 1.25em;
+  margin: 0;
+  border-radius: 0.4em;
+  cursor: pointer;
+  width: 15em;
+  text-align: center;
+  font-size: 0.9em;
+  margin-top: 9em;
 }
 
+.continenten button:hover {
+  transform: scale(1.06);
+}
 
 /* ///Matches page //////////////////////////////////////////////////////////////////////////// */
 /* ///Matches page, form --> nav buttons ////////////////////////////////////////////// */
-#buttonTerug{
-    border-radius: 50%;
-    border: solid #3481F3;
-    width: 4em;
-    height: 4em;
-    background-color: #3481F3;
-    float: left;
-    margin-left: 3em;
+#buttonTerug {
+  border-radius: 50%;
+  border: solid #3481f3;
+  width: 4em;
+  height: 4em;
+  background-color: #3481f3;
+  float: left;
+  margin-left: 3em;
 }
-#buttonTerug img{
-    width: 2.5em;
+#buttonTerug img {
+  width: 2.5em;
 }
 
-#favorietenButton{
-    border-radius: 50%;
-    border: solid #3481F3;
-    width: 3.3em;
-    height: 3.3em;
-    display: flex;
-    background-color: #3481F3;
-    justify-content: center;
-    float: right;
-    margin-right: 3em;
+#favorietenButton {
+  border-radius: 50%;
+  border: solid #3481f3;
+  width: 3.3em;
+  height: 3.3em;
+  display: flex;
+  background-color: #3481f3;
+  justify-content: center;
+  float: right;
+  margin-right: 3em;
 }
-#favorietenButton img{
-    width: 1.6em;
-    height: 1.6em;
-    margin: auto;
+#favorietenButton img {
+  width: 1.6em;
+  height: 1.6em;
+  margin: auto;
 }
 
 /* /// Matches page --> section 1 //////////////////////////////////////////////////////////////// */
-.matches main section:first-of-type h1{
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    font-size: 3em; 
-    color: #3481F3;
+.matches main section:first-of-type h1 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  font-size: 3em;
+  color: #3481f3;
 }
-.matches main section:first-of-type h2{
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: 1.2em;
-    color: black;
-    justify-content: center;
-    text-align: center;
+.matches main section:first-of-type h2 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.2em;
+  color: black;
+  justify-content: center;
+  text-align: center;
 }
 
 /* /// Matches page --> div, template matches profile //////////////////////////////////////////////////////////////// */
-.matches main div:first-of-type{
-    display: grid;
-    justify-content: center;
-    flex-direction: column;
-    margin: auto;
-    margin-top: 3em;
+.matches main div:first-of-type {
+  display: grid;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 3em;
 }
 
 /* /// ul */
-.matches main div section ul{
-    margin-top: 1.5em;
+.matches main div section ul {
+  margin-top: 1.5em;
 }
 
 /* Chat button */
-.matches main div button{
-    color: white;
-    background-color: #3481F3;
-    width: 9rem;
-    height: 2rem;
-    border-radius: 0.4em;
-    border: #3481F3;
-    margin-top: -5.7em;
-    margin-left: 7.9em;
+.matches main div button {
+  color: white;
+  background-color: #3481f3;
+  width: 9rem;
+  height: 2rem;
+  border-radius: 0.4em;
+  border: #3481f3;
+  margin-top: -5.7em;
+  margin-left: 7.9em;
 }
-.matches main div button:hover{
-    transform: scale(1.1);
+.matches main div button:hover {
+  transform: scale(1.1);
 }
 
 /* Match profielfoto */
-.matches main div section{
-    background-color: white;
-    border-radius: 0.6em;
-    margin: 1em;
-    height: 12rem;
-    width: 20rem;
+.matches main div section {
+  background-color: white;
+  border-radius: 0.6em;
+  margin: 1em;
+  height: 12rem;
+  width: 20rem;
 }
-.matches main div section img:first-of-type{
-    margin-left: 1.5em;
-} 
-.matches main div section img{
-    width: 7em;
-    position: absolute;
-    margin-left: 1.5em;
-    margin-top: 2.5em;
+.matches main div section img:first-of-type {
+  margin-left: 1.5em;
+}
+.matches main div section img {
+  width: 7em;
+  position: absolute;
+  margin-left: 1.5em;
+  margin-top: 2.5em;
 }
 
 /* Form --> Like en unlike */
-.matches main div section form{
-    margin-left: 16em;
+.matches main div section form {
+  margin-left: 16em;
 }
 
 /* Form --> Like button */
-.matches main div section form button{
-    margin-left: -5.5em;
-    color: transparent;
-    background-color: transparent;
+.matches main div section form button {
+  margin-left: -5.5em;
+  color: transparent;
+  background-color: transparent;
 }
-.matches main div section form button:hover{
-    transform: scale(1.1);
+.matches main div section form button:hover {
+  transform: scale(1.1);
 }
-.matches main div section form button img{
-    width: 2.3em;
-    height: 2.3em;
-    margin-top: 0.25em;
+.matches main div section form button img {
+  width: 2.3em;
+  height: 2.3em;
+  margin-top: 0.25em;
 }
 
-.matches main div section form:nth-of-type(2){
-    margin-left: 16em;
+.matches main div section form:nth-of-type(2) {
+  margin-left: 16em;
 }
-.matches main div section form:nth-of-type(2) button{
-    margin-left: -5.5em;
-    color: transparent;
-    background-color: transparent;
+.matches main div section form:nth-of-type(2) button {
+  margin-left: -5.5em;
+  color: transparent;
+  background-color: transparent;
 }
-.matches main div section form:nth-of-type(2) button img{
-    width: 2.3em;
-    height: 2.3em;
-    margin-top: 0.25em;
+.matches main div section form:nth-of-type(2) button img {
+  width: 2.3em;
+  height: 2.3em;
+  margin-top: 0.25em;
 }
 
 /* Form --> ul van data matches */
-.matches main div section ul{
-    margin-top: 0.5em;
+.matches main div section ul {
+  margin-top: 0.5em;
 }
-.matches main div section ul li{
-    margin-left: 6.7em;
-    list-style: none;
+.matches main div section ul li {
+  margin-left: 6.7em;
+  list-style: none;
 }
 
 /* Google Maps Public API */
 
-.matches #map{
-    height: 400px;
-    width: 100%;
-} 
+.matches #map {
+  height: 400px;
+  width: 100%;
+}
 /* //////////////////////////////////////////////////////////////////////////////////////////// */
-
-
 
 /* ///Favorieten pagina //////////////////////////////////////////////////////////////////////////// */
 /* ///Favoriten pagina --> nav buttons ////////////////////////////////////////////// */
-#buttonHome{
-    border-radius: 50%;
-    border: solid #3481F3;
-    width: 4.1em;
-    height: 4.1em;
-    display: flex;
-    background-color: #3481F3;
-    justify-content: center;
-    float: right;
-    margin-right: 3em;
+#buttonHome {
+  border-radius: 50%;
+  border: solid #3481f3;
+  width: 4.1em;
+  height: 4.1em;
+  display: flex;
+  background-color: #3481f3;
+  justify-content: center;
+  float: right;
+  margin-right: 3em;
 }
-#buttonHome img{
-    width: 2em;
-    height: 2em;
-    margin: auto;
+#buttonHome img {
+  width: 2em;
+  height: 2em;
+  margin: auto;
 }
 
 /* ///Favorieten pagina //////////////////////////////////////////////////////////////////////////// */
 /* ///Favorieten pagina --> section ////////////////////////////////////////////// */
-.favorieten main section:first-of-type h1{
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    font-size: 3em; 
-    color: #3481F3;
+.favorieten main section:first-of-type h1 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  font-size: 3em;
+  color: #3481f3;
 }
-.favorieten main section:first-of-type h2{
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: 1.2em;
-    color: black;
-    justify-content: center;
-    text-align: center;
+.favorieten main section:first-of-type h2 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.2em;
+  color: black;
+  justify-content: center;
+  text-align: center;
 }
 
 /* /// Favoriten pagina page --> div, template matches profile //////////////////////////////////////////////////////////////// */
-.favorieten main div{
-    display: grid;
-    justify-content: center;
-    flex-direction: column;
-    margin: auto;
-    margin-top: 3em;
+.favorieten main div {
+  display: grid;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 3em;
 }
-.favorieten main div button{
-    color: white;
-    background-color: #3481F3;
-    width: 9rem;
-    height: 2rem;
-    border-radius: 0.4em;
-    border: #3481F3;
-    margin-top: -5.7em;
-    margin-left: 12.6em;
+.favorieten main div button {
+  color: white;
+  background-color: #3481f3;
+  width: 9rem;
+  height: 2rem;
+  border-radius: 0.4em;
+  border: #3481f3;
+  margin-top: -5.7em;
+  margin-left: 12.6em;
 }
-.favorieten main div button:hover{
-    transform: scale(1.1);
+.favorieten main div button:hover {
+  transform: scale(1.1);
 }
-.favorieten main div section{
-    background-color: white;
-    border-radius: 0.6em;
-    margin: 1em;
-    height: 12rem;
-    width: 20rem;
+.favorieten main div section {
+  background-color: white;
+  border-radius: 0.6em;
+  margin: 1em;
+  height: 12rem;
+  width: 20rem;
 }
-.favorieten main div section img:first-of-type{
-    margin-left: 1.5em;
-} 
-.favorieten main div section img{
-    width: 7em;
-    position: absolute;
-    margin-left: 1.5em;
-    margin-top: 2.5em;
+.favorieten main div section img:first-of-type {
+  margin-left: 1.5em;
 }
-.favorieten main div section form{
-    margin-left: 16em;
+.favorieten main div section img {
+  width: 7em;
+  position: absolute;
+  margin-left: 1.5em;
+  margin-top: 2.5em;
+}
+.favorieten main div section form {
+  margin-left: 16em;
 }
 
 /* Form --> Like button */
-.favorieten main div section form button{
-    margin-left: -5.5em;
-    color: transparent;
-    background-color: transparent;
+.favorieten main div section form button {
+  margin-left: -5.5em;
+  color: transparent;
+  background-color: transparent;
 }
-.favorieten main div section form button:hover{
-    transform: scale(1.1);
+.favorieten main div section form button:hover {
+  transform: scale(1.1);
 }
-.favorieten main div section form button img{
-    width: 2.3em;
-    height: 2.3em;
-    margin-top: 0.25em;
+.favorieten main div section form button img {
+  width: 2.3em;
+  height: 2.3em;
+  margin-top: 0.25em;
 }
 
 /* Form --> ul van data matches */
-.favorieten main div section ul{
-    margin-top: 0.5em;
+.favorieten main div section ul {
+  margin-top: 0.5em;
 }
-.favorieten main div section ul li{
-    margin-left: 10.6em;
-    list-style: none;
+.favorieten main div section ul li {
+  margin-left: 10.6em;
+  list-style: none;
 }
 /* //////////////////////////////////////////////////////////////////////////////////// */
