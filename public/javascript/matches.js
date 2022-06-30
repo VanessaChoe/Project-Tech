@@ -1,3 +1,4 @@
+/* eslint-disable */
 console.log("matches.js");
 
 // // Location Web API //History Web API////////////////////////////////////////////////////////////////////////////////////////////
@@ -29,6 +30,6 @@ function initMap() {
     // Google maps Vlaggetje op de kaart
     position: { lat: 52.361966, lng: 4.907146 }, // cooördinaten van hva weesperplein
     map: map,
-    icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png", // Google maps Vlaggetje op de kaart
-  });
+    icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png" // Google maps Vlaggetje op de kaart
+});
 }

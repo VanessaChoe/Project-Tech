@@ -1,6 +1,6 @@
 # TravelBuddy
 
-<img width="924" alt="Schermafbeelding 2022-06-05 om 22 38 43" src="https://user-images.githubusercontent.com/90140769/172069622-67de210b-0402-4816-acf3-8145e2935246.png">
+<img width="924" alt="Schermafbeelding 2022-07-01 om 00 09 01" src="https://github.com/VanessaChoe/Project-Tech/issues/1#issue-1261593001">
 
 Voor een project voor school heb ik een feature moeten maken voor een matching applicatie. Voor dit project heb ik 1 filter functie uitgewerkt door middel van frontend en backend. TravelBuddy is dus geen complete matching applicatie.
 

@@ -1,3 +1,4 @@
+/* eslint-disable */
 console.log("favorite.js");
 
 const ButtonTerug = document.getElementById("ButtonTerug");
