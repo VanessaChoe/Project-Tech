@@ -6,6 +6,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // MongoDB Connectie///////////////////////////////////////////////////////////////////////////
 
@@ -107,6 +108,10 @@ res.status(404).send('404');
 app.get('/favorites', async (req, res) => {
 
   try {
+  
+  const imgHartje = `<img src"/images/hartje.png'>`;
+  const imgRoodHartje = `<img src"/images/roodHartje.png'>`;
+  
   const travelbuddies = await db.collection('travelbuddies').find({ 
 
     like: true,}).toArray();
