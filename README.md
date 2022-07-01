@@ -28,7 +28,7 @@ Wil je mijn project clonen? Volg dan de onderstaande stappen in je terminal:
 <ol> 
     <li>Git clone https://github.com/VanessaChoe/Project-Tech.wiki.git</li>
     <li>npm install</li>
-    <li>Maak connnectie met de database</li>
+    <li>Maak connnectie met de database --> Lees hieronder Database connectie</li>
     <li>Voer localhost:3000 in je browser</li>
 </ol>
 
@@ -38,11 +38,15 @@ Om de TravelBuddy applicatie te gebruiken moet je eerst connectie maken met de d
 
 <ol> 
     <li>Installeer .env bestand: npm i dotenv --save</li>
-    <li>Zet daat jhet volgende in:
-    PORT= PORT NUMMER 
-    CONNECTION_STRING= DATABASE CONNECTION STRING 
+    <li>Zet daat het volgende in:
+        <ul>PORT= PORT NUMMER</ul>
+        <ul>DB_NAME= travelbuddy</ul>
+        <ul>DB_URI=</ul>
+        <ul>DB_PASS=</ul>
+        <ul>API_KEY=</ul>
+        <ul>CONNECTION_STRING= DATABASE CONNECTION STRING</ul>  
     </li>
-    <li>Maak connnectie met de database</li>
+    <li>Voer in je terminal: npm run dev</li>
     <li>Voer localhost:3000 in je browser</li>
 </ol>
 
