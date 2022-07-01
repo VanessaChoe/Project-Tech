@@ -6,7 +6,15 @@ Voor een project voor school heb ik een feature moeten maken voor een matching a
 
 # Concept 
 
-Travelbuddy is een app om een reis buddy te zoeken om samen te reizen naar een willekeurig land in een continent. Gebruikers kunnen doormiddel van een korte formulier een paar vragen beantwoorden om een TravelBuddy match te vinden. De gebruiker kan zelf bepalen naar welk bestemming hij binnen een land wil gaan met zijn TravelBuddy, door bijvoorbeeld te chatten.  
+Travelbuddy is een app om een reis buddy te zoeken om samen te reizen naar een willekeurig land in een continent. Gebruikers kunnen doormiddel van een korte formulier een paar vragen beantwoorden om een TravelBuddy match te vinden. De gebruiker kan zelf bepalen naar welk bestemming hij binnen een land wil gaan met zijn TravelBuddy, door bijvoorbeeld te chatten. 
+
+De features die ik heb uitgewerkt zijn filteren en liken. Door middel van een formulier die dus filtert, wordt gekeken welke TravelBuddy het beste bij je past. Op basis daarvan komen er een paar matches uit die je vervolgens kunt liken.
+
+Filteren
+<img width="600" alt="Schermafbeelding 2022-07-01 om 10 37 35" src="https://user-images.githubusercontent.com/90140769/176858378-dc533e81-be50-4d22-8a69-e5bb5c386b72.png">
+
+Liken
+<img width="600" alt="Schermafbeelding 2022-07-01 om 10 37 54" src="https://user-images.githubusercontent.com/90140769/176858439-dd15d461-2581-4020-abf2-2ba70d6e070a.png">
 
 Benieuwd naar mijn documentatie? Neem een kijkje door mijn 
 <a href="https://github.com/VanessaChoe/Project-Tech/wiki">wiki</a>!
@@ -16,7 +24,7 @@ Benieuwd naar mijn documentatie? Neem een kijkje door mijn
 Wil je mijn project clonen? Volg dan de onderstaande stappen in je terminal:
 
 <ol> 
-    <li>git clone https://github.com/VanessaChoe/Project-Tech.wiki.git</li>
+    <li>Git clone https://github.com/VanessaChoe/Project-Tech.wiki.git</li>
     <li>npm install</li>
     <li>nodemon index.js</li>
     <li>Voer localhost:3000 in je browser</li>
