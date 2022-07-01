@@ -10,10 +10,12 @@ Travelbuddy is een app om een reis buddy te zoeken om samen te reizen naar een w
 
 De features die ik heb uitgewerkt zijn filteren en liken. Door middel van een formulier die dus filtert, wordt gekeken welke TravelBuddy het beste bij je past. Op basis daarvan komen er een paar matches uit die je vervolgens kunt liken.
 
-Filteren
+Filteren op geslacht en continent.
+
 <img width="600" alt="Schermafbeelding 2022-07-01 om 10 37 35" src="https://user-images.githubusercontent.com/90140769/176858378-dc533e81-be50-4d22-8a69-e5bb5c386b72.png">
 
-Liken
+Matches liken en unliken.
+
 <img width="600" alt="Schermafbeelding 2022-07-01 om 10 37 54" src="https://user-images.githubusercontent.com/90140769/176858439-dd15d461-2581-4020-abf2-2ba70d6e070a.png">
 
 Benieuwd naar mijn documentatie? Neem een kijkje door mijn 
@@ -26,7 +28,21 @@ Wil je mijn project clonen? Volg dan de onderstaande stappen in je terminal:
 <ol> 
     <li>Git clone https://github.com/VanessaChoe/Project-Tech.wiki.git</li>
     <li>npm install</li>
-    <li>nodemon index.js</li>
+    <li>Maak connnectie met de database</li>
+    <li>Voer localhost:3000 in je browser</li>
+</ol>
+
+# Database connectie
+
+Om de TravelBuddy applicatie te gebruiken moet je eerst connectie maken met de database om de matches op te halen. Dit doe je door in je terminal:
+
+<ol> 
+    <li>Installeer .env bestand: npm i dotenv --save</li>
+    <li>Zet daat jhet volgende in:
+    PORT= PORT NUMMER 
+    CONNECTION_STRING= DATABASE CONNECTION STRING 
+    </li>
+    <li>Maak connnectie met de database</li>
     <li>Voer localhost:3000 in je browser</li>
 </ol>
 
